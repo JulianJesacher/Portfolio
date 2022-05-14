@@ -2,16 +2,20 @@
     --section-height: 30em;
 
     height: var(--section-height);
-    background: var(--top-background-gradient);
+    max-height: 965px;
     position: relative;
 }
 
-.section-top>svg {
-    width: 100%;
-    height: 100%;
+.section-top>.background-image {
     position: absolute;
+    height: 100%;
+    width: 100%;
     top: 0;
-    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-image: url("/assets/top-section-bg-light-small.png");
+    background-position: center;
+    z-index: -1;
 }
 
 .welcome-text {
@@ -19,17 +23,32 @@
 }
 
 .welcome-text>h1 {
-    color: var(--welcome-text-color);
-    font-size: 3em;
-    text-align: center;
+    color: var(--text-color-main-light);
+    font-size: 3.5em;
+    text-align: left;
     margin: 0;
 }
 
+.welcome-text>h1::before {
+    content: "Hi, I´m";
+    font-size: 0.35em;
+}
+
+.welcome-text>h1::after {
+    content: ".";
+}
+
+.welcome-text>h1::before,
+.welcome-text>h1::after {
+    color: var(--text-color-accent-light);
+}
+
 .welcome-text>p {
-    color: var(--welcome-text-color);
-    font-size: 1.4em;
+    color: var(--text-color-secondary-light);
+    font-size: 1.25em;
     text-align: center;
     margin: 0.4em 0;
+    width: fit-content;
 }
 
 .welcome-text>p::after {
@@ -37,21 +56,44 @@
     animation: cursor-blink 1.5s steps(2) infinite;
 }
 
-.rounded-button>span {
-    color: var(--accent-color);
+.welcome-text .text-accent {
+    color: var(--text-color-accent-light);
+}
+
+.btn-contact-me {
+    margin-top: 0.85em;
+    background: linear-gradient(45deg, #6BDBA4, #E1F8B4);
+    padding: 1em 2em;
+    border-radius: 2.25em;
+    border: none;
+}
+
+.btn-contact-me>span {
+    color: white;
     font-size: 1.5em;
-    font-weight: 100;
 }
 
 @media (min-width: 700px) {
     .section-top {
         font-size: 1.25rem;
     }
+
+    .section-top>.background-image {
+        background-image: url("/assets/top-section-bg-light-big.png");
+        background-size: cover;
+        box-shadow: 2px 0 30px rgba(50, 50, 50, 0.2);
+    }
+
+    .welcome-text {
+        background: rgba(200, 200, 200, 0.3);
+        padding: 1em;
+    }
 }
 
-@media (min-width: 1200px) {
-    .section-top {
-        font-size: 1.5rem;
+@media (min-width: 900px) {
+    .welcome-text {
+        margin-right: 50%;
+        background: none;
     }
 }
 
