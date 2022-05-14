@@ -1,0 +1,51 @@
+header {
+    height: var(--navbar-height);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    height: var(--navbar-height);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.logo {
+    height: calc(var(--navbar-height) * 0.4);
+    object-fit: contain;
+}
+
+.navbar-menu {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+}
+
+.mobile-menu > span {
+    background-color: white;
+    height: 0.25em;
+    display: block;
+}
+
+.mobile-menu:nth-child(1) {
+    width: 2em;
+}
+
+.mobile-menu:nth-child(2) {
+    width: 1.5em;
+    margin: 0.5em 0;
+}
+
+.mobile-menu:nth-child(3) {
+    width: 1em;
+}

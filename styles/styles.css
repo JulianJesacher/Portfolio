@@ -1,0 +1,95 @@
+@import 'utils.styles.css';
+@import 'header.styles.css';
+@import 'section-top.styles.css';
+@import 'section-about-me.style.css';
+@import 'section-technologies.styles.css';
+@import 'section-projects.style.css';
+@import 'footer.style.css';
+
+body {
+    --navbar-height: 3em;
+    --footer-height: 15em;
+
+    --background-color: hsla(0, 0%, 98%, 1);
+    --top-background-gradient: linear-gradient(90deg, rgba(130, 232, 9, 1) 0%, rgba(82, 192, 62, 1) 50%, rgba(0, 155, 255, 1) 100%);
+    --welcome-text-color: hsla(0, 0%, 100%, 1);
+    --main-text-color: black;
+    --accent-color: hsl(283, 100%, 50%);
+    --red: hsl(354, 70%, 54%);
+    --technology-background-color: white;
+
+    --blue: #86A6F3;
+    --turquoise: #A8E2F1;
+    --purple: #9F98F3;
+    --pink: #DECAFE;
+    --red: #F58E89;
+    --orange: #FFD4BF;
+    --green: #6BDBA4;
+    --yellow: #E1F8B4;
+
+    --section-top-padding: 5em;
+
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--background-color);
+}
+
+body.dark-theme {
+    --background-color: hsla(240, 4, 5, 1);
+}
+
+section * {
+    color: var(--main-text-color);
+}
+
+.section-title {
+    width: fit-content;
+    position: relative;
+    padding-bottom: 1em;
+}
+
+.section-title>h2 {
+    margin: 0;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
+.section-title::before {
+    content: '';
+    width: 110%;
+    height: 3px;
+    bottom: 0;
+    background-color: red;
+    position: absolute;
+    left: -5%;
+}
+
+.rounded-button {
+    --button-height: 4em;
+
+    margin: 0.2em 0;
+    height: var(--button-height);
+    aspect-ratio: 3.25;
+    border-radius: 2em;
+    border: none;
+
+    background-color: white;
+}
+
+.rounded-button>span {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+@media (min-width: 700px) {
+    p {
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 1.3rem;
+    }
+}

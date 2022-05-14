@@ -1,0 +1,47 @@
+.section-about-me {
+    padding-top: var(--section-top-padding);
+
+    font-family: sans-serif;
+}
+
+.about-me {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 2.5em 0;
+}
+
+.section-title {
+    justify-self: center;
+}
+
+.about-me-content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-me-content > * {
+    margin: 0.5em;
+}
+
+.about-me-content > img {
+    object-fit: contain;
+    height: 20em;
+}
+
+.section-title > h2::before {
+    top: 130%;
+}
+
+@media (min-width: 700px){
+    .section-about-me{
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .section-about-me{
+        font-size: 1.3rem;
+    }
+}

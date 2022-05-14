@@ -1,0 +1,99 @@
+.section-projects {
+    padding-top: var(--section-top-padding);
+
+    font-family: sans-serif;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 2.5em 0;
+}
+
+.projects-description-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.description>* {
+    margin: 1em;
+}
+
+.description>img {
+    height: 10em;
+}
+
+.projects-wrapper {
+    margin-top: 5em;
+    margin-bottom: 10em;
+}
+
+.project {
+    background: white;
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 70px 140px 2px rgba(130, 135, 17, 0.2);
+}
+
+.project>* {
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.project>img {
+    height: 100%;
+    width: 40%;
+    min-width: 15em;
+    object-fit: cover;
+}
+
+.project-content {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-content {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    grid-gap: 2em 0;
+}
+
+.project-content>p {
+    margin: 0;
+}
+
+#project1 > .rounded-button {
+    background: -webkit-linear-gradient(top right, #47E2E3, #B41195);
+    background: -moz-linear-gradient(top right, #47E2E3, #B41195);
+    background: linear-gradient(to bottom left, #47E2E3, #B41195);
+}
+
+.project-content>.rounded-button>span {
+    color: white;
+    font-size: 1.25em;
+}
+
+@media (max-width: 750px) {
+    .project>img {
+        width: auto;
+    }
+
+    .project>div {
+        width: auto;
+    }
+}
