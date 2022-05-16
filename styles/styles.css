@@ -10,7 +10,7 @@ body {
     --navbar-height: 3em;
     --footer-height: 15em;
 
-    
+
     --top-background-gradient: linear-gradient(90deg, rgba(130, 232, 9, 1) 0%, rgba(82, 192, 62, 1) 50%, rgba(0, 155, 255, 1) 100%);
     --welcome-text-color: hsla(0, 0%, 100%, 1);
     --main-text-color: black;
@@ -30,12 +30,21 @@ body {
     --yellow: #E1F8B4;
 
     --text-color-main-light: #000000;
-    --text-color-secondary-light: #F9F9EC;
+    --text-color-secondary-light: #676767;
     --text-color-accent-light: var(--purple);
 
     --background-color: #EDEEE9;
-
     --section-top-padding: 5em;
+
+    --text-color-main: var(-- --text-color-main-light);
+    --text-color-secondary: var(--text-color-secondary-light);
+    --text-color-accent: var(--text-color-accent-light);
+
+    --button-gradient-green: linear-gradient(45deg, var(--green), var(--yellow));
+    --button-gradient-blue: linear-gradient(45deg, var(--blue), var(--turquoise));
+    --button-gradient-orange: linear-gradient(45deg, var(--red), var(--orange));
+    --button-gradient-purple: linear-gradient(45deg, var(--purple), var(--pink));
+
 
     margin: 0;
     font-family: sans-serif;
@@ -52,6 +61,7 @@ body.dark-theme {
     padding-bottom: 1em;
 }
 
+/*
 .section-title>h2 {
     margin: 0;
     display: inline-block;
@@ -68,6 +78,7 @@ body.dark-theme {
     position: absolute;
     left: -5%;
 }
+*/
 
 /*
 .rounded-button {

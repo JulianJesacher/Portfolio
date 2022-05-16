@@ -28,11 +28,11 @@
             </nav>
         </header>
 
-        <section class="section-top flex centered">            
+        <section class="section-top flex centered">
             <div class="welcome-text flex centered">
-                <h1><br>JULIAN<br />JESACHER</h1>
+                <h1><br />JULIAN<br />JESACHER</h1>
                 <p>> Welcome to my portfolio 👋</p>
-                <button class="btn-contact-me rounded-button clickable">
+                <button class="btn-contact-me rounded-button button-shadow clickable">
                     <span>Contact me!</span>
                 </button>
             </div>
@@ -42,15 +42,18 @@
         <section class="section-about-me">
             <div class="container">
                 <div class="about-me">
-                    <div class="section-title">
-                        <h2>&lt About me /&gt</h2>
-                    </div>
                     <div class="about-me-content flex">
-                        <p class="text-paragraph-width">
-                            My name is Julian Jesacher, a bachelors degree in computer science at the technical university of munich. Feel
-                            free to contact me if you have any questions.
-                        </p>
-                        <img src="assets/portrait.jpg" alt="A portrait of myself" />
+                        <img src="assets/portrait.png" alt="A portrait of myself" />
+                        <div class="about-me-text text-paragraph-width">
+                            <h2>About <span class="accent-text">me.</span></h2>
+                            <p class="text-paragraph-width">
+                                My name is Julian Jesacher and I am 19 years old. I'm very interested in programming and computer science in
+                                general. The seemingly infinite possibilities of software fascinate me.<br />
+                                In 2021 I graduated from highschool and I already knew that I wanted to focus my career on software
+                                development. I am currently pursuing a bachelors degree in computer science at the technical university of
+                                munich. Feel free to contact me if you have any questions.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,11 +62,11 @@
         <section class="section-technologies">
             <div class="container">
                 <div class="technologies">
-                    <div class="section-title">
-                        <h2>&lt Technologies /&gt</h2>
+                    <div class="technologies-title">
+                        <h2>Technologies</h2>
                         <p class="text-paragraph-width">
                             Some technologies I've worked with.<br />
-                            Click the technology you're interested in 😉
+                            Click the technology you're interested in
                         </p>
                     </div>
                     <div class="technologies-content">
@@ -118,15 +121,16 @@
 
                         <div class="projects-wrapper">
                             <div class="project">
-                                <img src="/assets/angular-logo.png" />
+                                <img src="/assets/portrait.png" />
                                 <div class="project-content" id="project1">
+                                    <h3>Some randim Title like foodbok or sudoku or idk</h3>
                                     <p>
                                         orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum libero nec sem dignissim
                                         vestibulum. Aenean gravida ipsum eget dapibus ullamcorper. Cras placerat dui non libero luctus
                                         condimentum. Fusce venenatis quis massa ut porta. Pellentesque habitant morbi tristique senectus et
                                         netus et malesuada fames ac turpis
                                     </p>
-                                    <button class="rounded-button button-shadow">
+                                    <button class="view-project-button rounded-button button-shadow">
                                         <span> VIEW PROJECT </span>
                                     </button>
                                 </div>
@@ -138,20 +142,32 @@
         </section>
 
         <footer>
-            <div class="footer-background flex centered">
+            <img class="footer-background" src="/assets/footer-bg.png" alt="Footer background" />
+            <div class="flex centered">
                 <div class="footer-content container">
-                    <p>Any questions?</p>
+                    <h2>Do you have <span>any questions?</span></h2>
+                    <h3>Don´t hesitate to ask.</h3>
                     <button class="btn-contact-me rounded-button clickable button-shadow">
-                        <span> CONTACT ME! </span>
+                        <span> Contact me! </span>
                     </button>
-                </div>
-                <div class="social-icons">
-                    <div class="social-wrapper">
-                        <a href="https://instagram.com">
-                            <i id="instagram"> </i>
-                        </a>
+                    <div class="social-icons">
+                        <div class="social-wrapper">
+                            <a href="https://www.instagram.com/_julian_jsc/">
+                                <img src="/assets/social-icons/instagram.png" alt="Instagram logo" />
+                            </a>
+                        </div>
+                        <div class="social-wrapper">
+                            <a href="https://www.linkedin.com/in/julian-jesacher-08b262203/">
+                                <img src="/assets/social-icons/linkedin.png" alt="Linkedin logo" />
+                            </a>
+                        </div>
+                        <div class="social-wrapper">
+                            <a href="https://github.com/JulianJesacher">
+                                <img src="/assets/social-icons/github.png" alt="Github logo" />
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </div>               
             </div>
         </footer>
     </body>

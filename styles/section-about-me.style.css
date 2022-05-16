@@ -16,32 +16,58 @@
 }
 
 .about-me-content {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: space-around;
 }
 
-.about-me-content > * {
-    margin: 0.5em;
+.about-me-content>* {
+    margin: 1em;
 }
 
-.about-me-content > img {
+.about-me-content>img {
+    order: 1;
     object-fit: contain;
     height: 20em;
+    border-radius: 20px;
 }
 
-.section-title > h2::before {
-    top: 130%;
+.about-me-content>img:hover {
+    box-shadow: 3px 3px 10px var(--text-color-accent);
 }
 
-@media (min-width: 700px){
-    .section-about-me{
+.about-me-text {
+    display: inline-flex;
+    max-width: fit-content;
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-text>* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.about-me-text>h2 {
+    width: fit-content;
+    font-size: 2em;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+.about-me-text .accent-text {
+    color: var(--text-color-accent);
+}
+
+@media (min-width: 700px) {
+    .section-about-me {
         font-size: 1.15rem;
     }
 }
 
-@media (min-width: 1200px){
-    .section-about-me{
-        font-size: 1.3rem;
+@media (min-width: 1200px) {
+    .section-about-me {
+        font-size: 1.2rem;
     }
 }

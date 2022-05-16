@@ -23,7 +23,7 @@
 }
 
 .welcome-text>h1 {
-    color: var(--text-color-main-light);
+    color: var(--text-color-main);
     font-size: 3.5em;
     text-align: left;
     margin: 0;
@@ -40,11 +40,11 @@
 
 .welcome-text>h1::before,
 .welcome-text>h1::after {
-    color: var(--text-color-accent-light);
+    color: var(--text-color-accent);
 }
 
 .welcome-text>p {
-    color: var(--text-color-secondary-light);
+    color: var(--text-color-secondary);
     font-size: 1.25em;
     text-align: center;
     margin: 0.4em 0;
@@ -57,12 +57,12 @@
 }
 
 .welcome-text .text-accent {
-    color: var(--text-color-accent-light);
+    color: var(--text-color-accent);
 }
 
 .btn-contact-me {
     margin-top: 0.85em;
-    background: linear-gradient(45deg, #6BDBA4, #E1F8B4);
+    background: var(--button-gradient-green);
     padding: 1em 2em;
     border-radius: 2.25em;
     border: none;

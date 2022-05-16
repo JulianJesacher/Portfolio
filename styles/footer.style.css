@@ -1,16 +1,39 @@
-.footer-background {
-    background: -webkit-linear-gradient(top right, #CC1235, #0FB5AA);
-    background: -moz-linear-gradient(top right, #CC1235, #0FB5AA);
-    background: linear-gradient(to bottom left, #CC1235, #0FB5AA);
-
-    height: var(--footer-height);
-
-    flex-direction: column;
+footer {
+    position: relative;
 }
 
-.footer-content{
+.footer-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+.footer-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.footer-content>*{
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.footer-content>h2 {
+    font-size: 2.25em;
+    font-weight: 400;
+    color: var(--text-color-main);
+}
+
+.footer-content>h2>span {
+    color: var(--text-color-accent);
+}
+
+.footer-content>h3 {
+    font-size: 1.65em;
+    font-weight: 200;
+    color: var(--text-color-secondary);
 }

@@ -37,63 +37,98 @@
 }
 
 .project {
+    overflow: hidden;
     background: white;
-    border-radius: 40px;
-    padding: 40px;
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     box-shadow: 0 70px 140px 2px rgba(130, 135, 17, 0.2);
-}
-
-.project>* {
-    padding: 1em;
-    box-sizing: border-box;
+    height: auto;
 }
 
 .project>img {
-    height: 100%;
-    width: 40%;
-    min-width: 15em;
+    flex-grow: 1;
+    width: 100%;
+    /*aspect-ratio: 1;*/
     object-fit: cover;
+    overflow: hidden;
 }
 
 .project-content {
-    width: 60%;
-    display: flex;
+    flex-shrink: 1;
+    padding: 1em;
+    display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.project-content {
-    display: grid;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    grid-gap: 2em 0;
-}
-
-.project-content>p {
+.project-content>* {
     margin: 0;
 }
 
-#project1 > .rounded-button {
-    background: -webkit-linear-gradient(top right, #47E2E3, #B41195);
-    background: -moz-linear-gradient(top right, #47E2E3, #B41195);
-    background: linear-gradient(to bottom left, #47E2E3, #B41195);
+.project-content>h3 {
+    font-size: 1.75em;
+    font-weight: 300;
+    color: var(--text-color-main);
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
-.project-content>.rounded-button>span {
+.project-content>p {
+    color: var(--text-color-secondary);
+    padding-bottom: 1.5rem;
+}
+
+.view-project-button {
+    padding: 1em 2em;
+    border-radius: 2.25em;
+    border: none;
+}
+
+.view-project-button>span {
     color: white;
-    font-size: 1.25em;
+    font-size: 1.15em;
+}
+
+.view-project-button:nth-of-type(4n){
+    background: var(--button-gradient-purple);
+}
+
+.view-project-button:nth-of-type(4n+1){
+    background: var(--button-gradient-orange);
+}
+
+.view-project-button:nth-of-type(4n+2){
+    background: var(--button-gradient-blue);
+}
+
+.view-project-button:nth-of-type(4n+3){
+    background: var(--button-gradient-green);
 }
 
 @media (max-width: 750px) {
-    .project>img {
-        width: auto;
-    }
-
     .project>div {
         width: auto;
     }
 }
+
+@media (min-width: 600px){
+    .project{
+        flex-wrap: nowrap;
+    }
+    .project>img{  
+        min-width: 35%;   
+        max-width: 40%;  
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1000px){
+    .project>img{  
+        min-width: 40%;   
+    }
+}
+
