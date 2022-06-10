@@ -1,0 +1,85 @@
+.darkmode-slider {
+    --darkmode-slider-height: 34px;
+    --darkmode-slider-width: 64px;
+    --darkmode-slider-bg-light: #404040;
+    --darkmode-slider-bg-dark: #ffffff;
+
+    --darkmode-slider-circle-size: 26px;
+    --darkmode-slider-circle-distance: 4px;
+    --darkmode-slider-circle-shift-distance: 32px;
+
+    --darkmode-slider-image-size: 22px;
+    --darkmode-slider-image-distance: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode-slider>label {
+    display: inline-block;
+    height: var(--darkmode-slider-height);
+    width: var(--darkmode-slider-width);
+}
+
+.darkmode-slider input {
+    display: none;
+}
+
+.darkmode-slider .slider {
+    background-color: var(--darkmode-slider-bg-light);
+    height: var(--darkmode-slider-height);
+    width: var(--darkmode-slider-width);
+    cursor: pointer;
+    transition: .4s;
+    border-radius: calc(var(--darkmode-slider-height)/2);
+    border: none;
+    position: relative;
+    box-shadow: 1px 1px 5px hsl(0, 0%, 30%);
+}
+
+/*circle*/
+.darkmode-slider .slider:before {
+    content: "";
+    height: var(--darkmode-slider-circle-size);
+    aspect-ratio: 1;
+
+    position: absolute;
+    bottom: var(--darkmode-slider-circle-distance);
+    left: var(--darkmode-slider-circle-distance);
+
+    transition: .4s;
+    border-radius: calc(var(--darkmode-slider-circle-size)/2);
+    background: linear-gradient(45deg, var(--orange-light), var(--orange-dark));
+    box-shadow: 0 0 3px #FF5C00;
+}
+
+/*image*/
+.darkmode-slider .slider:after {
+    content: "";
+    height: var(--darkmode-slider-image-size);
+    aspect-ratio: 1;
+
+    position: absolute;
+    bottom: var(--darkmode-slider-image-distance);
+    right: var(--darkmode-slider-image-distance);
+
+    transition: .4s;
+    background-image: url('/assets/darkmode-slider/Moon.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#darkmode-checkbox:checked+.slider {
+    background-color: var(--darkmode-slider-bg-dark);
+}
+
+#darkmode-checkbox:checked+.slider::before {
+    transform: translateX(var(--darkmode-slider-circle-shift-distance));
+}
+
+#darkmode-checkbox:checked+.slider::after {
+    background-image: url('/assets/darkmode-slider/Sun.png');
+    left: var(--darkmode-slider-image-distance);
+    right: auto;
+}
