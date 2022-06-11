@@ -1,0 +1,9 @@
+.contact-btn{
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    box-shadow: 2px 2px 3px hsl(0, 0%, 40%);
+}

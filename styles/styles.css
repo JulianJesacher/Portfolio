@@ -1,10 +1,22 @@
 @import url('welcome-section.styles.css');
 @import url('darkmode-toggle.styles.css');
+@import url('utils.styles.css');
 
-/*Open Sans weight 300 and 500*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+/*Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+/*Oldenburg*/
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
 
 :root {
     --orange-light: #F6980B;
     --orange-dark: #EC6931;
+
+    --primary-text-color: #000000;
+    --secondary-text-color: #868686;
+
+    --max-width: 1100px;
+}
+
+body{
+    margin: 0;
 }

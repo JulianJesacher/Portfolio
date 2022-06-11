@@ -10,26 +10,52 @@
     <body>
         <header>
             <nav>
-                <div class="navbar">
-                    <div class="navbar-content-left">
-                        <div class="logo-wrapper"><span>Logo</span></div>
-                    </div>
-                    <div class="navbar-content-right">
-                        <li class="navbar-item">About me</li>
-                        <li class="navbar-item">Technologies</li>
-                        <li class="navbar-item">Projects</li>
-                        <li>
-                            <div class="darkmode-slider">
-                                <label for="darkmode-checkbox">
-                                    <input type="checkbox" id="darkmode-checkbox" />
-                                    <div class="slider"></div>
-                                </label>
-                            </div>
-                        </li>
-                        <li><button class="navbar-contact-btn">Contact me!</button></li>
+                <div class="navbar-wrapper">
+                    <div class="navbar">
+                        <div class="navbar-content-left">
+                            <div class="logo-wrapper navbar-item"><span>Logo</span></div>
+                        </div>
+                        <div class="navbar-content-right">
+                            <li class="navbar-item">About me</li>
+                            <li class="navbar-item">Technologies</li>
+                            <li class="navbar-item">Projects</li>
+                            <li>
+                                <div class="darkmode-slider">
+                                    <label for="darkmode-checkbox">
+                                        <input type="checkbox" id="darkmode-checkbox" />
+                                        <div class="slider"></div>
+                                    </label>
+                                </div>
+                            </li>
+                            <li><button class="navbar-contact-btn contact-btn">Contact me!</button></li>
+                        </div>
+                        <button class="navbar-mobile-toggle navbar-item">Menu</button>
                     </div>
                 </div>
             </nav>
         </header>
+
+        <section class="welcome-section">
+            <div class="welcome-wrapper">
+                <div class="welcome-content">
+                    <span>Hi, my name is</span>
+                    <h1>Julian<br />Jesacher</h1>
+                    <p>
+                        I'm a computer science student<br />
+                        at the tecnical university of munich<br />
+                        &gtWelcome to <span>my portfolio.</span>
+                    </p>
+                    <div class="welcome-btn-social-wrapper">
+                        <button class="welcome-contact-btn contact-btn">Contact me!</button>
+                        <div class="welcome-social-icon-wrapper">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+                </div>
+                <img class="welcome-portrait" src="/assets/portrait.png" alt="Portrait of myself">
+            </div>
+        </section>
     </body>
 </html>

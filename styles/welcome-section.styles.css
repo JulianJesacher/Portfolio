@@ -1,16 +1,37 @@
+.navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    margin: 0 3em;
+    margin: 0 1em;
     margin-top: 1.5em;
+    width: 100%;
+    max-width: var(--max-width);
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
 .navbar-content-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    display: none;
+}
+
+.navbar-mobile-toggle{
+    background: none;
+    border: none;
+    font-size: 1em;
 }
 
 .navbar-content-right li {
@@ -28,11 +49,91 @@
     border-radius: 0.95em;
 
     background: linear-gradient(to right, var(--orange-dark), var(--orange-light));
-    color: white;
-    border: none; 
-    cursor: pointer;
 }
 
-.navbar-contact-btn:hover {
-    box-shadow: 2px 2px 3px hsl(0, 0%, 40%);
+.welcome-section {
+    height: 100vh;
+}
+
+.welcome-wrapper {
+    display: flex;
+    align-items: top;
+    justify-content: left;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    position: relative;
+}
+
+.welcome-content {
+    margin-top: 4em;
+    margin-left: 2em;
+    color: var(--primary-text-color);
+}
+
+.welcome-content>span {
+    font-family: 'Oldenburg';
+    font-weight: 400;
+    font-size: 0.85em;
+}
+
+.welcome-content>h1 {
+    font-weight: 600;
+    font-size: 4em;
+    margin: 0;
+    line-height: 1.15em;
+}
+
+.welcome-content>p {
+    color: var(--secondary-text-color);
+    font-size: 0.9em;
+}
+
+.welcome-content>p>span {
+    font-weight: 600;
+    font-style: italic;
+    color: linear-gradient(var(--orange-light), var(--orange-dark));
+}
+
+.welcome-btn-social-wrapper {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: fit-content;
+    grid-gap: 1em 0;
+}
+
+.welcome-contact-btn {
+    font-weight: 600;
+    border-radius: 1.5em;
+    font-size: 1.1em;
+    padding: 0;
+    margin: 0;
+    width: 9em;
+    height: 3em;
+
+    background: linear-gradient(to right, var(--orange-dark), var(--orange-light));
+}
+
+.welcome-social-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.welcome-social-icon-wrapper>div {
+    display: block;
+    width: 2.9em;
+    height: 2.9em;
+    border-radius: 1.45em;
+    background-color: black;
+}
+
+.welcome-portrait{
+    height: 85vh;
+    position: absolute;
+    bottom: -3.5em;
+    right: -21.5em;
+    z-index: -1;
 }
