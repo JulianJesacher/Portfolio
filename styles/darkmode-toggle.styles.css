@@ -79,7 +79,6 @@
 }
 
 #darkmode-checkbox:checked+.slider::after {
+    transform: translateX(-30px);   
     background-image: url('/assets/darkmode-slider/Sun.png');
-    left: var(--darkmode-slider-image-distance);
-    right: auto;
 }

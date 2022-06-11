@@ -11,12 +11,19 @@
     --orange-light: #F6980B;
     --orange-dark: #EC6931;
 
-    --primary-text-color: #000000;
-    --secondary-text-color: #868686;
+    --primary-text-color-light: #000000;
+    --secondary-text-color-light: #868686;
+    --welcome-text-title-color-light: #404040;
+    --primary-text-color: var(--primary-text-color-light);
+    --secondary-text-color: var(--secondary-text-color-light);
+    --welcome-text-title-color: var(--welcome-text-title-color-light);
+
+    --social-icon-background-light: #4f4f4f;
+    --social-icon-background: var(--social-icon-background-light);
 
     --max-width: 1100px;
 }
 
-body{
+body {
     margin: 0;
 }
