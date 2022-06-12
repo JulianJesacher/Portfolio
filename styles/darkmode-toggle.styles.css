@@ -70,15 +70,15 @@
     background-size: cover;
 }
 
-#darkmode-checkbox:checked+.slider {
+.darkmode .slider {
     background-color: var(--darkmode-slider-bg-dark);
 }
 
-#darkmode-checkbox:checked+.slider::before {
+.darkmode .slider::before {
     transform: translateX(var(--darkmode-slider-circle-shift-distance));
 }
 
-#darkmode-checkbox:checked+.slider::after {
-    transform: translateX(-30px);   
+.darkmode .slider::after {
+    transform: translateX(-30px);
     background-image: url('/assets/darkmode-slider/Sun.png');
 }
