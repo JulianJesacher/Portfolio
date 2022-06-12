@@ -31,7 +31,7 @@
     height: var(--darkmode-slider-height);
     width: var(--darkmode-slider-width);
     cursor: pointer;
-    transition: .4s;
+
     border-radius: calc(var(--darkmode-slider-height)/2);
     border: none;
     position: relative;
@@ -48,10 +48,13 @@
     bottom: var(--darkmode-slider-circle-distance);
     left: var(--darkmode-slider-circle-distance);
 
-    transition: .4s;
     border-radius: calc(var(--darkmode-slider-circle-size)/2);
     background: linear-gradient(45deg, var(--orange-light), var(--orange-dark));
     box-shadow: 0 0 3px #FF5C00;
+}
+
+.darkmode-slider.transition .slider:before{
+    transition: var(--main-transition-time);
 }
 
 /*image*/
@@ -64,10 +67,13 @@
     bottom: var(--darkmode-slider-image-distance);
     right: var(--darkmode-slider-image-distance);
 
-    transition: .4s;
     background-image: url('/assets/darkmode-slider/Moon.png');
     background-position: center;
     background-size: cover;
+}
+
+.darkmode-slider.transition .slider:after{
+    transition: var(--main-transition-time);
 }
 
 .darkmode .slider {

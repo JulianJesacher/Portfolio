@@ -29,6 +29,10 @@
     display: none;
 }
 
+.navbar-item{
+    color: var(--secondary-text-color);
+}
+
 .navbar-mobile-toggle {
     background: none;
     border: none;
@@ -81,7 +85,7 @@
 }
 
 .welcome-content>h1 {
-    color: var(--welcome-text-title-color);
+    color: var(---primary-text-color);
     font-weight: 600;
     font-size: 4em;
     margin: 0;
