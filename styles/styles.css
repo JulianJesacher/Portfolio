@@ -18,12 +18,24 @@
     --secondary-text-color: var(--secondary-text-color-light);
     --welcome-text-title-color: var(--welcome-text-title-color-light);
 
-    --social-icon-background-light: #4f4f4f;
+    --social-icon-background-light: #4F4f4F;
+    --social-icon-background-dark: #FFFFFF;
     --social-icon-background: var(--social-icon-background-light);
+
+    --body-background-light: #FFFFFF;
+    --body-backround-dark: #1A1A1A;
+    --body-background: var(--body-backround-light);
+
 
     --max-width: 1100px;
 }
 
+body.darkmode {
+    --social-icon-background: var(--social-icon-background-dark);
+    --body-background: var(--body-backround-dark);
+}
+
 body {
     margin: 0;
+    background-color: var(--body-background);
 }
