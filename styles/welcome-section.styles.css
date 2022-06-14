@@ -209,6 +209,7 @@
 @media (min-width: 1000px) {
     .welcome-content {
         font-size: 1.2rem;
+        margin-left: 0;
     }
 
     .welcome-content>p {
