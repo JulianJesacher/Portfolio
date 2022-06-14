@@ -1,5 +1,6 @@
 @import url('welcome-section.styles.css');
 @import url('darkmode-toggle.styles.css');
+@import url('about-me-section.styles.css');
 @import url('utils.styles.css');
 
 /*Open Sans*/
@@ -26,6 +27,10 @@
     --body-backround-dark: #1A1A1A;
     --body-background: var(--body-backround-light);
 
+    --about-me-background-light: #E7F1F4;
+    --about-me-background-dark: #2F2F2F;
+    --about-me-background: var(--about-me-background-light);
+
     --main-transition-time: .5s;
 
     --max-width: 1100px;
@@ -36,11 +41,13 @@ body.darkmode {
     --body-background: var(--body-backround-dark);
     --primary-text-color: var(--primary-text-color-dark);
     --secondary-text-color: var(--secondary-text-color-dark);
+    --about-me-background: var(--about-me-background-dark);
 }
 
 body {
     margin: 0;
     background-color: var(--body-background);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .transition {
