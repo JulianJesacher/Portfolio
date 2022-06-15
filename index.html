@@ -7,7 +7,7 @@
         <title>Julian Jesacher</title>
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
-    <body class="transition">
+    <body>
         <header>
             <nav>
                 <div class="navbar-wrapper">
@@ -42,7 +42,7 @@
                     <h1 class="transition">Julian<br />Jesacher</h1>
                     <p>
                         I'm a computer science student<br />
-                        at the tecnical university of munich<br />
+                        at the technical university of munich<br />
                         &gtWelcome to <span>my portfolio.</span>
                     </p>
                     <div class="welcome-btn-social-wrapper">
@@ -108,7 +108,7 @@
         <section class="about-me-section">
             <div class="about-me-wrapper">
                 <div class="about-me-content-wrapper">
-                    <div style="width: 55vw;"></div>
+                    <div style="width: 55vw"></div>
                     <div class="about-me-content">
                         <h2>About me</h2>
                         <p>
@@ -125,5 +125,10 @@
 
         <script type="text/javascript" src="app.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script type="text/javascript">
+            setTimeout(() => {
+                document.body.classList.add("transition");
+            }, 100);
+        </script>
     </body>
 </html>
