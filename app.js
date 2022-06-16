@@ -23,3 +23,7 @@ function setDarkModePreference() {
     Array.from(document.getElementsByClassName("darkmode-slider")).forEach((element) => element.classList.add("transition"));
 }
 window.onload = setDarkModePreference;
+
+setTimeout(() => {
+    document.body.classList.add("transition");
+}, 100);
