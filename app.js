@@ -2,7 +2,6 @@
 document.getElementById("darkmode-checkbox").addEventListener("click", (event) => {
     document.body.classList.toggle("darkmode");
     localStorage.setItem("darkmodeActive", event.target.checked);
-    console.log(event.target.checked);
 });
 
 function setDarkModePreference() {
@@ -26,4 +25,5 @@ window.onload = setDarkModePreference;
 
 setTimeout(() => {
     document.body.classList.add("transition");
-}, 100);
+    Array.from(document.getElementsByClassName("social-icon")).forEach((element) => element.shadowRoot.querySelector('g').classList.add("social-icon"));
+}, 1000);

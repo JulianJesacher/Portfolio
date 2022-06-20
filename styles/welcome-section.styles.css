@@ -27,7 +27,7 @@
     display: none;
 }
 
-.navbar-item{
+.navbar-item {
     color: var(--secondary-text-color);
 }
 
@@ -148,16 +148,8 @@
     z-index: -1;
 }
 
-.social-icon-dark {
-    display: none;
-}
-
-.darkmode .social-icon-dark {
-    display: inline-block;
-}
-
-.darkmode .social-icon-light {
-    display: none;
+.social-icon {
+    fill: red;
 }
 
 @media (min-width: 500px) {
