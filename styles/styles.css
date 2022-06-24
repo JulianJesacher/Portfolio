@@ -1,6 +1,7 @@
 @import url('welcome-section.styles.css');
 @import url('darkmode-toggle.styles.css');
 @import url('about-me-section.styles.css');
+@import url('projects-section.styles.css');
 @import url('utils.styles.css');
 
 /*Open Sans*/
@@ -13,10 +14,10 @@
     --orange-dark: #EC6931;
 
     --primary-text-color-light: #000000;
-    --secondary-text-color-light: #868686;
     --primary-text-color-dark: #FFFFFF;
-    --secondary-text-color-dark: #868686;
     --primary-text-color: var(--primary-text-color-light);
+    --secondary-text-color-light: #868686;
+    --secondary-text-color-dark: #868686;
     --secondary-text-color: var(--secondary-text-color-light);
 
     --body-background-light: #FFFFFF;
@@ -26,16 +27,15 @@
     --social-icon-background-light: #4F4f4F;
     --social-icon-background-dark: #FFFFFF;
     --social-icon-background: var(--social-icon-background-light);
-
     --social-icon-foreground-light: #FFFFFF;
     --social-icon-foreground-dark: #000000;
     --social-icon-foreground: var(--social-icon-foreground-light);
-    
+
     --about-me-background-light: #E7F1F4;
     --about-me-background-dark: #2F2F2F;
     --about-me-background: var(--about-me-background-light);
 
-    --main-transition-time: 0.75s;
+    --main-transition-time: .75s;
 
     --max-width: 1100px;
 }

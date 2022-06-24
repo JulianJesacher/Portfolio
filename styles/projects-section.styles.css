@@ -1,0 +1,56 @@
+:root {
+    --project-background-light: #404040;
+    --project-background-dark: #FFFFFF;
+    --project-background: var(--project-background-light);
+    
+    --project-border-radius: 15px;
+    --project-image-border-radius: 20px;
+}
+
+body.darkmode {
+    --project-background: var(--project-background-dark);
+}
+
+.project-wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.project {
+    width: 95%;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+
+    background-color: var(--project-background);
+    border-radius: var(--project-border-radius);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*transparent infinite project background*/
+.project::before {
+    content: '';
+    background-image: url('/assets/infinite-backgrounds/02\ Voronoi\ Mesh.png');
+    background-repeat: repeat;
+    background-size: 250px;
+    opacity: .1;
+    border-radius: var(--project-border-radius);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.project-image{
+    box-shadow: 15px 15px 4px rgba(0, 0, 0, .2);
+
+    aspect-ratio: 1;
+    width: 90%;
+    border-radius: var(--project-image-border-radius);
+}

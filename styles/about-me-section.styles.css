@@ -1,11 +1,23 @@
 .about-me-section {
     height: 100vh;
+    position: relative;
+}
+
+.about-me-background {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    top: -10vh;
+}
+
+.about-me-background path {
+    fill: var(--about-me-background);
+    transition: var(--main-transition-time);
 }
 
 .about-me-wrapper {
     z-index: 2;
     height: 100%;
-    background-color: var(--about-me-background);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,9 +25,14 @@
 
 .about-me-content-wrapper {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     height: 80%;
     grid-gap: 0 1em;
+}
+
+.about-me-laptop-wrapper{
+    width: 0;
+    /*55vw*/
 }
 
 .about-me-content {
@@ -28,14 +45,14 @@
 
 .about-me-content>h2 {
     color: var(--primary-text-color);
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: 600;
     margin: 0;
     margin-bottom: 0.1em;
 }
 
 .about-me-content>p {
-    font-size: 1.1em;
+    font-size: 1.05rem;
     margin: 0;
     color: var(--secondary-text-color);
 }
