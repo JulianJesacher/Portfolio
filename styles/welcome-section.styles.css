@@ -149,7 +149,8 @@
 }
 
 .social-icon {
-    fill: red;
+    fill: var(--social-icon-foreground);
+    transition: var(--main-transition-time);
 }
 
 @media (min-width: 500px) {
