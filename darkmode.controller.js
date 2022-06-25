@@ -1,9 +1,13 @@
-//Darkmode
+//Add listener to darkmode slider
 document.getElementById("darkmode-checkbox").addEventListener("click", (event) => {
     document.body.classList.toggle("darkmode");
     localStorage.setItem("darkmodeActive", event.target.checked);
 });
 
+/*
+Load darkmode preferences from system/storage and
+set darkmode accordingly
+*/
 window.addEventListener("load", function (event) {
     const localStorageSetting = localStorage.getItem("darkmodeActive");
     const checkBox = document.getElementById("darkmode-checkbox");
@@ -19,6 +23,10 @@ window.addEventListener("load", function (event) {
     }
 });
 
+/*
+After lottiefiles have been replaces, add css class to their paths
+to allow to change color dynamically
+*/
 setTimeout(() => {
     Array.from(document.getElementsByClassName("social-icon")).forEach((socialIcon) => {
         paths = socialIcon.shadowRoot.querySelectorAll("svg path");
