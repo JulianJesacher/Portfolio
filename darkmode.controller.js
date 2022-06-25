@@ -27,4 +27,12 @@ setTimeout(() => {
             path.removeAttribute("fill");
         });
     });
+
+    Array.from(document.getElementsByClassName("project-social-icon")).forEach((socialIcon) => {
+        paths = socialIcon.shadowRoot.querySelectorAll("svg path");
+        paths.forEach((path) => {
+            path.classList.add("project-social-icon");
+            path.removeAttribute("fill");
+        });
+    });
 }, 100);
