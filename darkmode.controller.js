@@ -17,18 +17,6 @@ window.addEventListener("load", function (event) {
         document.body.classList.add("darkmode");
         checkBox.checked = true;
     }
-
-    Array.from(document.getElementsByClassName("social-icon")).forEach((socialIcon) => {
-        const linkElem = document.createElement("link");
-        linkElem.setAttribute("rel", "styles/welcome-section.styles.css");
-        socialIcon.shadowRoot.appendChild(linkElem);
-
-        paths = socialIcon.shadowRoot.querySelectorAll("svg path");
-        paths.forEach((path) => {
-            path.classList.add("social-icon");
-            path.removeAttribute("fill");
-        });
-    });
 });
 
 setTimeout(() => {
