@@ -10,12 +10,17 @@
     --project-social-icon-background-dark: var(--social-icon-background-light);
     --project-social-icon-background-light: var(--social-icon-background-dark);
     --project-social-icon-background: var(--project-social-icon-background-light);
+
+    --project-description-text-color-light: var(--primary-text-color-dark);
+    --project-description-text-color-dark: var(--primary-text-color-light);
+    --project-description-text-color: var(--project-description-text-color-light);
 }
 
 body.darkmode {
     --project-background: var(--project-background-dark);
     --project-social-icon-background: var(--project-social-icon-background-dark);
     --project-social-icon-foreground: var(--project-social-icon-foreground-dark);
+    --project-description-text-color: var(--project-description-text-color-dark);
 }
 
 .project-wrapper {
@@ -35,9 +40,10 @@ body.darkmode {
     --project-title-horizontal-padding: 0.3rem;
     --project-title-height: calc(var(--project-title-font-size) + 2*var(--project-title-vertical-padding));
 
+    --project-social-icon-size: 3.5rem;
 
     width: var(--project-width);
-    height: 100vh;
+    height: fit-content;
     position: relative;
     z-index: 0;
 
@@ -98,7 +104,6 @@ body.darkmode {
 }
 
 .project-image-wrapper>.social-icon-wrapper {
-    --project-social-icon-size: 3.5rem;
     width: var(--project-social-icon-size);
     height: var(--project-social-icon-size);
     border-radius: calc(var(--project-social-icon-size)/2);
@@ -113,4 +118,58 @@ body.darkmode {
 .project-social-icon {
     fill: var(--project-social-icon-foreground);
     transition: var(--main-transition-time);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 90%;
+    margin-top: calc(0.75*var(--project-social-icon-size));
+    z-index: 5;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--project-description-text-color);
+    width: 100%;
+    text-align: right;
+}
+
+.project-content-separator {
+    margin-top: .75rem;
+}
+
+.project-content-separator::before {
+    --seperator-width: 6rem;
+    --separator-height: .1rem;
+    --separator-color: var(--project-description-text-color);
+
+    content: '';
+    display: block;
+    width: var(--seperator-width);
+    height: var(--separator-height);
+    background-color: var(--separator-color);
+    opacity: 1;
+    border-radius: calc(var(--separator-height)/2);
+}
+
+.view-project-btn {
+    --view-project-btn-font-size: 1.4rem;
+    --view-project-btn-horizontal-padding: 0.6rem;
+    --view-project-btn-height: calc(var(--view-project-btn-font-size) + 2*var(--view-project-btn-horizontal-padding));
+    
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+    font-size: var(--view-project-btn-font-size);
+    font-weight: 600;
+    color: white;
+
+    background: linear-gradient(to right, var(--orange-light), var(--orange-dark));
+    padding: var(--view-project-btn-horizontal-padding) 0.8rem;
+    border-radius: calc(var(--view-project-btn-height)/2);
 }
