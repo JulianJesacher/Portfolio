@@ -14,6 +14,10 @@
     --project-description-text-color-light: var(--primary-text-color-dark);
     --project-description-text-color-dark: var(--primary-text-color-light);
     --project-description-text-color: var(--project-description-text-color-light);
+
+    --project-title-background-light: #FFFFFF;
+    --project-title-background-dark: #1A1A1A;
+    --project-title-background: var(--project-title-background-light);
 }
 
 body.darkmode {
@@ -21,6 +25,7 @@ body.darkmode {
     --project-social-icon-background: var(--project-social-icon-background-dark);
     --project-social-icon-foreground: var(--project-social-icon-foreground-dark);
     --project-description-text-color: var(--project-description-text-color-dark);
+    --project-title-background: var(--project-title-background-dark);
 }
 
 .project-wrapper {
@@ -78,7 +83,7 @@ body.darkmode {
     right: calc(-0.5* (100vw - var(--project-width)));
     box-shadow: 5px 10px 4px 3px rgba(0, 0, 0, .15);
 
-    background-color: white;
+    background-color: var(--project-title-background);
     z-index: 2;
     border-radius: var(--project-border-radius);
 
