@@ -1,0 +1,7 @@
+version: '3.8'
+services: 
+    portfolio:
+        container_name: 'Portfolio'
+        image: 'test-portfolio'
+        ports: 
+            - 127.0.0.1:1000:80
