@@ -27,4 +27,4 @@ jobs:
                   file: ./Dockerfile
                   pull: true
                   push: true
-                  tags: 'ghcr.io/julianjesacher/portfolio/portfolio:latest,ghcr.io/julianjesacher/portfolio/portfolio:${{ env.SEM_VERSION }}-alpine'
+                  tags: 'ghcr.io/julianjesacher/portfolio:latest,ghcr.io/julianjesacher/portfolio:${{ env.SEM_VERSION }}-alpine'
