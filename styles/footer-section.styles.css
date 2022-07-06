@@ -60,10 +60,6 @@
     fill: var(--social-icon-foreground-dark);
 }
 
-.footer-background-text {
-    z-index: -999;
-}
-
 .footer-background {
     position: absolute;
     bottom: -150px;
