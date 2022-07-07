@@ -66,6 +66,7 @@
     bottom: -180px;
     transform: scale(0.6) translateX(+50px);
     z-index: -1;
+    width: 2230px;
 }
 
 .footer-background>path {
