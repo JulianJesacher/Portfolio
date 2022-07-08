@@ -34,10 +34,11 @@
 .contact-me-footer-btn {
     --contact-btn-footer-font-size: 1.3rem;
     --contact-btn-footer-vertical-padding: 0.75rem;
+    --contact-btn-footer-horizontal-padding: 3rem;
     --contact-btn-footer-height: calc(var(--contact-btn-footer-font-size) + 2*var(--contact-btn-footer-vertical-padding));
 
     font-size: var(--contact-btn-footer-font-size);
-    padding: var(--contact-btn-footer-vertical-padding) 3rem;
+    padding: var(--contact-btn-footer-vertical-padding) var(--contact-btn-footer-horizontal-padding);
     border-radius: calc(0.5*var(--contact-btn-footer-height));
 
     color: white;
@@ -83,6 +84,25 @@
 @media (min-width: 650px) {
     .footer-background {
         transform: scale(0.6) translateX(+150px);
+    }
+
+    .contact-me-footer-btn {
+        --contact-btn-footer-horizontal-padding: 5rem;
+        font-size: 1.5rem;
+    }
+
+    .footer-content>span {
+        font-size: 1.75rem;
+    }
+
+    .footer-content>h2 {
+        font-size: 3.5rem;
+    }
+
+    .footer-content .social-icon-wrapper {
+        height: 3.2rem;
+        width: 3.2rem;
+        border-radius: 1.6rem;
     }
 }
 
