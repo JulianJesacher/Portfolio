@@ -1,3 +1,17 @@
+:root {
+    --background-text-light: #575757;
+    --background-text-dark: #BBBBBB;
+    --background-text-clip-light: #FFFFFF;
+    --background-text-clip-dark: #000000;
+    --background-text: var(--background-text-light);
+    --background-text-clip: var(--background-text-clip-light);
+}
+
+body.darkmode {
+    --background-text: var(--background-text-dark);
+    --background-text-clip: var(--background-text-clip-dark);
+}
+
 .footer-section {
     height: 100vh;
     overflow: hidden;
@@ -68,11 +82,27 @@
     transform: scale(0.6) translateX(+50px);
     z-index: -1;
     width: 2230px;
+    mix-blend-mode: exclusion;
 }
 
 .footer-background>path {
     fill: #575757;
 }
+
+.footer-background text {
+
+    font-size: 10em;
+    font-weight: 600;
+}
+
+.footer-background>text {
+    fill: var(--background-text);
+}
+
+#footer-backgound-text-group>text {
+    fill: var(--background-text-clip);
+}
+
 
 @media (min-width: 550px) {
     .footer-content>h2 {
