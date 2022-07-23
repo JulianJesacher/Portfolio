@@ -116,7 +116,7 @@ body.darkmode {
     }
 
     .footer-background-text {
-        transform: translateX(-215px) translateY(75px);
+        transform: translateX(-215px) translateY(50px);
         font-size: 14rem;
     }
 
@@ -137,6 +137,12 @@ body.darkmode {
         height: 3.2rem;
         width: 3.2rem;
         border-radius: 1.6rem;
+    }
+}
+
+@media (min-width: 1250px) {
+    .footer-background-text {
+        transform: translateX(-855px) translateY(50px);
     }
 }
 
