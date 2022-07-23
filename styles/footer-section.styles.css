@@ -103,9 +103,25 @@ body.darkmode {
     fill: var(--background-text-clip);
 }
 
+.footer-background-limiter {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-background-limiter>div{
+    width: 1920px;
+    height: 100vh;
+    position: relative;
+}
+
 .footer-background-decorator {
     position: absolute;
-    left: 2.5vw;
+    left: 48px;
     top: 7.5vh;
     height: 85vh;
     z-index: -1;
