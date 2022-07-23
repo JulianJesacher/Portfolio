@@ -103,12 +103,13 @@ body.darkmode {
     fill: var(--background-text-clip);
 }
 
-.footer-background-decorator{
+.footer-background-decorator {
     position: absolute;
     left: 2.5vw;
     top: 7.5vh;
     height: 85vh;
     z-index: -1;
+    display: none;
 }
 
 
@@ -152,6 +153,12 @@ body.darkmode {
 @media (min-width: 1250px) {
     .footer-background-text {
         transform: translateX(-855px) translateY(50px);
+    }
+}
+
+@media (min-width: 1450px) {
+    .footer-background-decorator {
+        display: inline;
     }
 }
 
