@@ -24,7 +24,7 @@ window.addEventListener("load", function (event) {
 });
 
 /*
-After lottiefiles have been replaces, add css class to their paths
+After lottiefiles have been replaced, add css class to their paths
 to allow to change color dynamically
 */
 setTimeout(() => {
