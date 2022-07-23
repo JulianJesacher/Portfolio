@@ -18,6 +18,7 @@ body.darkmode {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    position: relative;
 }
 
 .footer-content {
@@ -100,6 +101,14 @@ body.darkmode {
 
 #footer-backgound-text-group>text {
     fill: var(--background-text-clip);
+}
+
+.footer-background-decorator{
+    position: absolute;
+    left: 2.5vw;
+    top: 7.5vh;
+    height: 85vh;
+    z-index: -1;
 }
 
 
