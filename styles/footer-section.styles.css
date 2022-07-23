@@ -89,9 +89,8 @@ body.darkmode {
     fill: #575757;
 }
 
-.footer-background text {
-
-    font-size: 10em;
+.footer-background-text {
+    font-size: 10rem;
     font-weight: 600;
 }
 
@@ -114,6 +113,11 @@ body.darkmode {
 @media (min-width: 650px) {
     .footer-background {
         transform: scale(0.6) translateX(+150px);
+    }
+
+    .footer-background-text {
+        transform: translateX(-215px) translateY(75px);
+        font-size: 14rem;
     }
 
     .contact-me-footer-btn {
