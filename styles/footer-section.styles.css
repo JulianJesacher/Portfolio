@@ -60,6 +60,7 @@ body.darkmode {
     background: linear-gradient(to right, var(--orange-light), var(--orange-dark));
     border: none;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 
