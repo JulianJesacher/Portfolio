@@ -55,14 +55,14 @@
 
 .contact-me-form input {
     width: 80vw;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.35rem;
     height: var(--contact-me-form-input-height);
 }
 
 .contact-me-form textarea {
     width: 80vw;
     height: var(--contact-me-form-textarea-height);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.35rem;
     resize: none;
 }
 
@@ -91,7 +91,7 @@
 .contact-me-form textarea:valid+label span {
     --shrink-factor: 0.6;
     --y-transition: calc(-1*(var(--contact-me-form-input-height) - var(--contact-me-form-placeholder-size)*(1 - var(--shrink-factor))));
-    transform: translate(0, var(--y-transition));
+    transform: translate(-5px, var(--y-transition));
     font-size: calc(var(--contact-me-form-placeholder-size)*var(--shrink-factor));
 }
 
