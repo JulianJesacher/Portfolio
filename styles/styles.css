@@ -10,6 +10,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400;0,700&display=swap');
 /*Oldenburg*/
 @import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+/*Inter*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
 
 :root {
     --orange-light: #F6980B;
