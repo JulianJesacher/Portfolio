@@ -6,6 +6,10 @@
     --contact-me-form-background-light: #FFFFFF;
     --contact-me-form-background: var(--contact-me-form-background-light);
 
+    --contact-me-form-input-height: 1.8rem;
+    --contact-me-form-textarea-height: 4.5rem;
+    --contact-me-form-placeholder-size: 1.25rem;
+
 }
 
 .contact-me-page {
@@ -51,15 +55,37 @@
 
 .contact-me-form input {
     width: 80vw;
-    margin-bottom: 1rem;
-    height: 1.75rem;
+    margin-bottom: 1.25rem;
+    height: var(--contact-me-form-input-height);
 }
 
 .contact-me-form textarea {
     width: 80vw;
-    height: 4rem;
-    margin-bottom: 1rem;
+    height: var(--contact-me-form-textarea-height);
+    margin-bottom: 1.25rem;
     resize: none;
+}
+
+.contact-me-form div {
+    position: relative;
+}
+
+.contact-me-form label {
+    position: absolute;
+    top: calc(var(--contact-me-form-input-height)/2 - var(--contact-me-form-placeholder-size)/2);
+    left: 0.2rem;
+    font-size: 0;
+}
+
+.contact-me-form label span {
+    display: inline-block;
+    font-size: var(--contact-me-form-placeholder-size);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contact-me-form input:focus+label span,
+.contact-me-form input:valid+label span{
+    transform: translate(-5px, -30px);
 }
 
 .contact-me-content button {

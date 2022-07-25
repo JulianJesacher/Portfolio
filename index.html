@@ -240,9 +240,18 @@
                 <div class="contact-me-content">
                     <h1>Let<span>'</span>s Talk</h1>
                     <div class="contact-me-form">
-                        <input type="text" id="nameInput">
-                        <input type="email" id="emailInput">
-                        <textarea name="Message" id="messageInput" cols="30" rows="10"></textarea>
+                        <div>
+                            <input type="text" id="nameInput" required />
+                            <label for="nameInput">
+                                <span style="transition-delay: 0ms">N</span>
+                                <span style="transition-delay: 50ms">a</span>
+                                <span style="transition-delay: 100ms">m</span>
+                                <span style="transition-delay: 150ms">e</span>
+                                <span style="transition-delay: 200ms">*</span>
+                            </label>
+                        </div>
+                        <input type="email" id="emailInput" required />
+                        <textarea name="Message" id="messageInput" cols="30" rows="10" required></textarea>
                     </div>
                     <button id="sendEmailButton" class="contact-btn">Submit</button>
                 </div>
@@ -276,5 +285,7 @@
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script type="text/javascript" src="darkmode.controller.js"></script>
         <script type="text/javascript" src="footer.controller.js"></script>
+        <script type="text/javascript" src="contact-me.controller.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
     </body>
 </html>
