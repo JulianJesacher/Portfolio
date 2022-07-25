@@ -66,13 +66,15 @@
     resize: none;
 }
 
+/*Moving input labels*/
 .contact-me-form div {
     position: relative;
 }
 
 .contact-me-form label {
     position: absolute;
-    top: calc(var(--contact-me-form-input-height)/2 - var(--contact-me-form-placeholder-size)/2);
+    --placeholder-top-position: calc(var(--contact-me-form-input-height)/2 - var(--contact-me-form-placeholder-size)/2);
+    top: var(--placeholder-top-position);
     left: 0.2rem;
     font-size: 0;
 }
@@ -84,8 +86,13 @@
 }
 
 .contact-me-form input:focus+label span,
-.contact-me-form input:valid+label span{
-    transform: translate(-5px, -30px);
+.contact-me-form input:not(:placeholder-shown)+label span,
+.contact-me-form textarea:focus+label span,
+.contact-me-form textarea:valid+label span {
+    --shrink-factor: 0.6;
+    --y-transition: calc(-1*(var(--contact-me-form-input-height) - var(--contact-me-form-placeholder-size)*(1 - var(--shrink-factor))));
+    transform: translate(0, var(--y-transition));
+    font-size: calc(var(--contact-me-form-placeholder-size)*var(--shrink-factor));
 }
 
 .contact-me-content button {
