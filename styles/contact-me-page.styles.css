@@ -209,3 +209,20 @@
         display: none;
     }
 }
+
+.contact-me-page.desktop {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.desktop .contact-me-content{
+    width: 100vw;
+    max-width: 1920px;
+}
+
+.desktop .contact-page-shadow path {
+    transform: translate(20px, 30px);
+    fill: url(#contact-page-shadow-gradient-desktop);
+}
