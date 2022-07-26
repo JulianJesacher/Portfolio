@@ -10,6 +10,8 @@
     --contact-me-form-textarea-height: 4.5rem;
     --contact-me-form-placeholder-size: 1.25rem;
 
+    --contact-me-margin-bottom: 1.35rem;
+
 }
 
 .contact-me-page {
@@ -63,7 +65,7 @@
 .contact-me-form textarea {
     width: 80vw;
     height: var(--contact-me-form-textarea-height);
-    margin-bottom: 1.35rem;
+    margin-bottom: var(--contact-me-margin-bottom);
     resize: none;
 }
 
@@ -94,6 +96,10 @@
     --y-transition: calc(-1*(var(--contact-me-form-input-height) - var(--contact-me-form-placeholder-size)*(1 - var(--shrink-factor))));
     transform: translate(-5px, var(--y-transition));
     font-size: calc(var(--contact-me-form-placeholder-size)*var(--shrink-factor));
+}
+
+.contact-me-content .g-recaptcha{
+    margin-bottom: var(--contact-me-margin-bottom);
 }
 
 .contact-me-content button {
