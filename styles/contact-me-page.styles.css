@@ -119,6 +119,11 @@
     border: none;
 }
 
+.contact-me-content button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 /*Gradient borders for input and textarea elements*/
 .contact-me-form input,
 .contact-me-form textarea {

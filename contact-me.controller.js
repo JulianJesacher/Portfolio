@@ -1,3 +1,3 @@
 window.captcha_successful = () => {
-    console.log("captcha successful");
+    document.getElementById("sendEmailButton").removeAttribute("disabled");
 };
