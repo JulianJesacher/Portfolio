@@ -43,13 +43,14 @@
     align-items: center;
 }
 
-.contact-me-content>h1 {
+.contact-me-content h1 {
     font-size: 4.5rem;
     font-weight: 700;
     margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-.contact-me-content>h1>span {
+.contact-me-content h1>span {
     color: var(--contact-me-accent-orange);
 }
 
