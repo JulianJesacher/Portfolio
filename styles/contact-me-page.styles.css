@@ -20,6 +20,9 @@
     --contact-me-form-input-height: 1.8rem;
     --contact-me-form-textarea-height: 4.5rem;
     --contact-me-form-placeholder-size: 1.25rem;
+    --contact-me-form-input-margin: 1.35rem;
+    --contact-me-label-shrink-factor: 0.6;
+    --contact-me-label-move-factor: 1.6;
 
     --contact-me-margin-bottom: 1.35rem;
     --contact-me-content-top-offset: 2rem;
@@ -88,7 +91,7 @@ body.darkmode {
 
 .contact-me-form input {
     width: 100%;
-    margin-bottom: 1.35rem;
+    margin-bottom: var(--contact-me-form-input-margin);
     height: var(--contact-me-form-input-height);
 }
 
@@ -122,10 +125,9 @@ body.darkmode {
 .contact-me-form input:not(:placeholder-shown)+label span,
 .contact-me-form textarea:focus+label span,
 .contact-me-form textarea:valid+label span {
-    --shrink-factor: 0.6;
-    --y-transition: calc(-1*(var(--contact-me-form-input-height) - var(--contact-me-form-placeholder-size)*(1 - var(--shrink-factor))));
+    --y-transition: calc(-1*var(--contact-me-form-placeholder-size)*var(--contact-me-label-move-factor)*var(--contact-me-label-shrink-factor));
     transform: translate(-5px, var(--y-transition));
-    font-size: calc(var(--contact-me-form-placeholder-size)*var(--shrink-factor));
+    font-size: calc(var(--contact-me-form-placeholder-size)*var(--contact-me-label-shrink-factor));
 }
 
 .contact-me-content .g-recaptcha {
@@ -214,9 +216,12 @@ body.darkmode {
         font-size: 4.75rem;
     }
 
-    :root {
+    .contact-me-page.mobile {
         --contact-me-form-input-height: 2.25rem;
         --contact-me-form-textarea-height: 6.5rem;
+        --contact-me-form-input-margin: 1.5rem;
+        --contact-me-label-shrink-factor: 0.7;
+        --contact-me-label-move-factor: 1.8;
     }
 }
 
@@ -283,6 +288,12 @@ body.darkmode {
         --submit-btn-font-size: 1.75rem;
         --submit-btn-vertical-padding: 0.75rem;
         --submit-btn-horizontal-padding: 1.8rem;
+    }
+
+    .contact-me-page.desktop {
+        --contact-me-label-shrink-factor: 0.8;
+        --contact-me-label-move-factor: 2.0;
+        --contact-me-form-input-margin: 1.5rem;
     }
 }
 
