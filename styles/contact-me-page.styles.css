@@ -102,6 +102,10 @@ body.darkmode {
     resize: none;
 }
 
+input, textarea{
+    color: var(--contact-me-form-text-color);
+}
+
 /*Moving input labels*/
 .contact-me-form div {
     position: relative;
