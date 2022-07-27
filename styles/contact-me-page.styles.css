@@ -265,18 +265,24 @@ body.darkmode {
     }
 }
 
-@media (min-height: 750px) {
+@media (min-width: 1150px) {
     .contact-me-content h1 {
-        font-size: 5.9rem;
+        font-size: 6.25rem;
     }
 
     .contact-me-content form {
-        width: 27.5rem;
+        width: 30.5rem;
     }
 
     :root {
         --contact-me-form-input-height: 2.5rem;
-        --contact-me-form-textarea-height: 7.75rem;
+        --contact-me-form-textarea-height: 7.5rem;
+    }
+
+    .contact-me-content button {
+        --submit-btn-font-size: 1.75rem;
+        --submit-btn-vertical-padding: 0.75rem;
+        --submit-btn-horizontal-padding: 1.8rem;
     }
 }
 
@@ -292,11 +298,5 @@ body.darkmode {
     :root {
         --contact-me-form-input-height: 2.75rem;
         --contact-me-form-textarea-height: 8rem;
-    }
-
-    .contact-me-content button {
-        --submit-btn-font-size: 1.75rem;
-        --submit-btn-vertical-padding: 0.75rem;
-        --submit-btn-horizontal-padding: 1.8rem;
     }
 }
