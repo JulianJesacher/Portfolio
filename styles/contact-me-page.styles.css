@@ -115,7 +115,7 @@ input, textarea{
     position: absolute;
     --placeholder-top-position: calc(var(--contact-me-form-input-height)/2 - var(--contact-me-form-placeholder-size)/2);
     top: var(--placeholder-top-position);
-    left: 0.2rem;
+    left: calc(var(--contact-me-form-input-height)*0.2);
     font-size: 0;
 }
 
