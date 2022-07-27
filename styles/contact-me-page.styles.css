@@ -113,7 +113,7 @@
 }
 
 .contact-me-content button {
-    --submit-btn-font-size: 1.1rem;
+    --submit-btn-font-size: 1.25rem;
     --submit-btn-vertical-padding: 0.5rem;
     --submit-btn-horizontal-padding: 1.6rem;
     --submit-btn-height: calc(var(--submit-btn-font-size) + 2*var(--submit-btn-vertical-padding));
@@ -124,7 +124,6 @@
     padding: var(--submit-btn-vertical-padding) var(--submit-btn-horizontal-padding);
     border-radius: calc(0.5*var(--submit-btn-height));
 
-    font-size: 1.25rem;
     background: linear-gradient(var(--orange-light), var(--orange-dark));
     border: none;
 }
@@ -184,6 +183,7 @@
     fill: url(#contact-page-shadow-gradient);
 }
 
+/*Mobile media queries*/
 @media (min-width: 700px) {
     .contact-me-content form {
         width: 22.5rem;
@@ -199,17 +199,7 @@
     }
 }
 
-/*Desktop view*/
-@media (min-width: 1000px) {
-    .contact-me-page.desktop {
-        display: grid;
-    }
-
-    .contact-me-page.mobile {
-        display: none;
-    }
-}
-
+/*Toggle between mobile and desktop view*/
 .contact-me-page.desktop {
     width: 100vw;
     height: 100vh;
@@ -217,7 +207,7 @@
     place-items: center;
 }
 
-.desktop .contact-me-content{
+.desktop .contact-me-content {
     width: 100vw;
     max-width: 1920px;
 }
@@ -225,4 +215,62 @@
 .desktop .contact-page-shadow path {
     transform: translate(20px, 30px);
     fill: url(#contact-page-shadow-gradient-desktop);
+}
+
+.mobile svg.desktop {
+    display: none;
+}
+
+.desktop svg.mobile {
+    display: none;
+}
+
+.mobile svg.mobile {
+    display: inherit;
+}
+
+.desktop svg.desktop {
+    display: inherit;
+}
+
+/*Desktop media queries*/
+@media (min-width: 1000px) {
+    .contact-me-content form {
+        width: 24rem;
+    }
+
+    .contact-me-content h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (min-height: 750px) {
+    .contact-me-content h1 {
+        font-size: 5.9rem;
+    }
+    .contact-me-content form {
+        width: 27.5rem;
+    }
+    :root {
+        --contact-me-form-input-height: 2.5rem;
+        --contact-me-form-textarea-height: 7.75rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .contact-me-content h1 {
+        font-size: 6.75rem;
+    }
+    .contact-me-content form {
+        width: 32.5rem;
+    }
+    :root {
+        --contact-me-form-input-height: 2.75rem;
+        --contact-me-form-textarea-height: 8rem;
+    }
+    .contact-me-content button {
+        --submit-btn-font-size: 1.75rem;
+        --submit-btn-vertical-padding: 0.75rem;
+        --submit-btn-horizontal-padding: 1.8rem;
+    }
 }
