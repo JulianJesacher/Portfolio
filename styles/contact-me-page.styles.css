@@ -1,10 +1,21 @@
 :root {
     --contact-me-accent-orange: #FF6B00;
+
     --contact-me-input-border-color-light: #000000;
+    --contact-me-input-border-color-dark: #FFFFFF;
     --contact-me-input-border-color: var(--contact-me-input-border-color-light);
 
     --contact-me-form-background-light: #FFFFFF;
+    --contact-me-form-background-dark: #222222;
     --contact-me-form-background: var(--contact-me-form-background-light);
+
+    --contact-me-form-input-background-light: #FFFFFF;
+    --contact-me-form-input-background-dark: #555555;
+    --contact-me-form-input-background: var(--contact-me-form-input-background-light);
+
+    --contact-me-form-text-color-light: #000000;
+    --contact-me-form-text-color-dark: #FFFFFF;
+    --contact-me-form-text-color: var(--contact-me-form-text-color-light);
 
     --contact-me-form-input-height: 1.8rem;
     --contact-me-form-textarea-height: 4.5rem;
@@ -12,6 +23,13 @@
 
     --contact-me-margin-bottom: 1.35rem;
     --contact-me-content-top-offset: 2rem;
+}
+
+body.darkmode {
+    --contact-me-input-border-color: var(--contact-me-input-border-color-dark);
+    --contact-me-form-background: var(--contact-me-form-background-dark);
+    --contact-me-form-text-color: var(--contact-me-form-text-color-dark);
+    --contact-me-form-input-background: var(--contact-me-form-input-background-dark);
 }
 
 .contact-me-page {
@@ -49,6 +67,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    color: var(--contact-me-form-text-color);
 }
 
 .contact-me-form>.input-wrapper {
@@ -60,6 +79,7 @@
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 1rem;
+    color: var(--contact-me-form-text-color);
 }
 
 .contact-me-content h1>span {
@@ -142,6 +162,7 @@
 .contact-me-form textarea {
     border-radius: 5px;
     border: 2px solid var(--contact-me-input-border-color);
+    background-color: var(--contact-me-form-input-background);
 }
 
 .contact-me-form input:focus,
@@ -151,7 +172,7 @@
     border-radius: 5px;
 
     background:
-        linear-gradient(var(--contact-me-form-background), var(--contact-me-form-background)) padding-box,
+        linear-gradient(var(--contact-me-form-input-background), var(--contact-me-form-input-background)) padding-box,
         linear-gradient(var(--orange-light), var(--orange-dark)) border-box;
 }
 
@@ -248,9 +269,11 @@
     .contact-me-content h1 {
         font-size: 5.9rem;
     }
+
     .contact-me-content form {
         width: 27.5rem;
     }
+
     :root {
         --contact-me-form-input-height: 2.5rem;
         --contact-me-form-textarea-height: 7.75rem;
@@ -261,13 +284,16 @@
     .contact-me-content h1 {
         font-size: 6.75rem;
     }
+
     .contact-me-content form {
         width: 32.5rem;
     }
+
     :root {
         --contact-me-form-input-height: 2.75rem;
         --contact-me-form-textarea-height: 8rem;
     }
+
     .contact-me-content button {
         --submit-btn-font-size: 1.75rem;
         --submit-btn-vertical-padding: 0.75rem;
