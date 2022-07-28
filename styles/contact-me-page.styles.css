@@ -338,16 +338,6 @@ input, textarea{
         --contact-me-label-move-factor: 2.0;
         --contact-me-form-input-margin: 1.5rem;
     }
-
-    .contact-page-middle-blob{
-        right: 12.5%;
-        bottom: 4.5%;
-    }
-    
-    .contact-page-little-blob{
-        right: 19.5%;
-        bottom: 10%;
-    }
 }
 
 @media (min-width: 1300px) {
@@ -362,5 +352,14 @@ input, textarea{
     :root {
         --contact-me-form-input-height: 2.75rem;
         --contact-me-form-textarea-height: 8rem;
+    }
+    .contact-page-middle-blob{
+        right: 12.5%;
+        bottom: 4.5%;
+    }
+    
+    .contact-page-little-blob{
+        right: 19.5%;
+        bottom: 10%;
     }
 }
