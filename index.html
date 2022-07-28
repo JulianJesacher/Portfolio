@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="styles/projects-section.styles.css" />
         <link rel="stylesheet" href="styles/utils.styles.css" />
         <link rel="stylesheet" href="styles/welcome-section.styles.css" />
+        <link rel="stylesheet" href="styles/mobile-menu.styles.css" />
         <script type="text/javascript" src="contact-me.controller.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
@@ -361,10 +362,16 @@
         </div>
 
         <div class="mobile-menu">
-            <div class="close-menu">
-                ✖
-            </div>
+            <div class="close-menu">✖</div>
             <ul class="menu-items">
+                <li>
+                    <div class="darkmode-slider">
+                        <label for="darkmode-checkbox">
+                            <input type="checkbox" id="darkmode-checkbox" />
+                            <div class="slider"></div>
+                        </label>
+                    </div>
+                </li>
                 <li>About me</li>
                 <li>Technologies</li>
                 <li>Projects</li>

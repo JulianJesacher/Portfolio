@@ -1,0 +1,76 @@
+.mobile-menu {
+    display: grid;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    color: var(--primary-text-color);
+}
+
+.mobile-menu .close-menu {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    transition-duration: .75s;
+}
+
+.mobile-menu .close-menu:hover,
+.mobile-menu .close-menu:active {
+    transform: rotate(-90deg) scale(1.1);
+    color: var(--orange-dark);
+    transition-timing-function: ease-out;
+    font-weight: 800;
+    transition-property: transform;
+}
+
+.mobile-menu .menu-items {
+    justify-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-menu .menu-items li {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+}
+
+.mobile-menu .menu-items li:first-child {
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+
+.mobile-menu .menu-items li:hover:not(:first-child),
+.mobile-menu .menu-items li:active:not(:first-child) {
+    color: var(--orange-dark);
+    transform: scale(1.1);
+    transition-duration: 1s;
+    font-weight: 600;
+    transition: transform;
+}
+
+.mobile-menu .menu-items li:not(:first-child):after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: -0.15em;
+    left: 0;
+    background-color: var(--orange-dark);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+}
+
+.mobile-menu .menu-items li:hover:not(:first-child):after,
+.mobile-menu .menu-items li:active:not(:first-child):after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
