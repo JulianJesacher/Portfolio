@@ -229,6 +229,21 @@ input, textarea{
     }
 }
 
+/*Center recaptcha popup on mobile*/
+.g-recaptcha-bubble-arrow
+{
+    display: none;
+}
+
+.g-recaptcha-bubble-arrow + div
+{
+    position: fixed !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
 /*Toggle between mobile and desktop view*/
 .contact-me-page.desktop {
     width: 100vw;
