@@ -8,7 +8,7 @@ document.getElementById("darkmode-checkbox").addEventListener("click", (event) =
 Load darkmode preferences from system/storage and
 set darkmode accordingly
 */
-window.addEventListener("load", function (event) {
+window.addEventListener("load", (event) => {
     const localStorageSetting = localStorage.getItem("darkmodeActive");
     const checkBox = document.getElementById("darkmode-checkbox");
 
