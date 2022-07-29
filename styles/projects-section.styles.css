@@ -256,3 +256,47 @@ body.darkmode {
         font-size: 1.5rem;
     }
 }
+
+/*reduced projects (no github or no demo)*/
+.project.no-github .social-icon-wrapper {
+    display: none;
+}
+
+.project.no-demo .view-project-btn {
+    display: none;
+}
+
+.project.no-demo .project-content-separator {
+    display: none;
+}
+
+.project.no-demo .project-content {
+    display: block;
+    margin-bottom: calc(0.75*var(--project-social-icon-size));
+}
+
+/*reduced projects on desktop screens*/
+@media (min-width: 600px) {
+    .project.no-demo .project-content {
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    .project.no-demo:not(.no-github) .social-icon-wrapper {
+        margin-top: 1.5rem;
+    }
+
+    .project.no-demo.no-github .project-content {
+        display: block;
+        margin-bottom: calc(1.25*var(--project-title-height));
+    }
+
+    .project.no-demo .project-content-separator {
+        /*Show separator because for github-logo, not necessary on mobile because logo is on another position*/
+        display: block;
+    }
+
+    .project.no-demo.no-github .project-content-separator {
+        display: none;
+    }
+}
