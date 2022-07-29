@@ -1,0 +1,9 @@
+[
+    {
+        "title": "Great Project 1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. ",
+        "demo-link": "a",
+        "github-link": "a",
+        "project-picture-path": "assets/project-image.jpg"
+    }
+]
