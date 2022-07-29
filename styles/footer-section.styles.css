@@ -2,7 +2,7 @@
     --background-text-light: #575757;
     --background-text-dark: #BBBBBB;
     --background-text-clip-light: #FFFFFF;
-    --background-text-clip-dark: #000000;
+    --background-text-clip-dark: #1A1A1A;
     --background-text: var(--background-text-light);
     --background-text-clip: var(--background-text-clip-light);
 }
