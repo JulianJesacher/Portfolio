@@ -60,6 +60,10 @@ body.darkmode {
     align-items: center;
 }
 
+.project:not(:first-child) {
+    margin-top: 5rem;
+}
+
 /*transparent infinite project background*/
 .project::before {
     content: '';
