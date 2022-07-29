@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 1920px;
 }
 
 .navbar {
@@ -129,10 +130,10 @@
 }
 
 .welcome-portrait {
-    height: 85vh;
+    height: 35rem;
     position: absolute;
-    bottom: -3.5em;
-    left: 6em;
+    bottom: -5em;
+    right: -20em;
     z-index: -1;
 }
 
@@ -143,8 +144,7 @@
 
 @media (min-width: 500px) {
     .welcome-portrait {
-        height: 90vh;
-        left: 10em;
+        height: 37.5rem;
     }
 
     .welcome-content {
@@ -157,9 +157,16 @@
 
 }
 
+@media (min-width: 600px) {
+    .welcome-portrait {
+        right: -15rem;
+    }
+}
+
 @media (min-width: 700px) {
     .welcome-portrait {
-        left: 15em;
+        right: -12.5em;
+        height: 42.5rem;
     }
 
     .welcome-wrapper {
@@ -182,8 +189,8 @@
 @media (min-width: 800px) {
     .welcome-portrait {
         left: initial;
-        right: -5em;
-        height: 95vh;
+        right: -7em;
+        height: 44.5rem;
     }
 }
 
@@ -203,5 +210,6 @@
 
     .welcome-portrait {
         right: -10em;
+        height: 50rem;
     }
 }
