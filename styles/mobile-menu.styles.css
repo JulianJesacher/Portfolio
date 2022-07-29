@@ -50,10 +50,9 @@
 .mobile-menu .menu-items li:hover:not(:first-child),
 .mobile-menu .menu-items li:active:not(:first-child) {
     color: var(--orange-dark);
-    transform: scale(1.1);
-    transition-duration: 1s;
-    font-weight: 600;
-    transition: transform;
+    transform: scale(1.2);
+    transition: transform 1s;
+    transition: font-size 1s;
 }
 
 .mobile-menu .menu-items li:not(:first-child):after {
