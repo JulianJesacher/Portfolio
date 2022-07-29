@@ -18,7 +18,7 @@
 
     --body-background-light: #FFFFFF;
     --body-backround-dark: #1A1A1A;
-    --body-background: var(--body-backround-light);
+    --body-background: var(--body-background-light);
 
     --social-icon-background-light: #4F4f4F;
     --social-icon-background-dark: #FFFFFF;

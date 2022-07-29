@@ -32,10 +32,11 @@
     color: var(--secondary-text-color);
 }
 
-#navbar-mobile-toggle {
+#open-mobile-menu {
     background: none;
     border: none;
     font-size: 1em;
+    cursor: pointer;
 }
 
 .navbar-content-right li {
