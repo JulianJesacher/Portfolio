@@ -1,3 +1,8 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 /*
   Detect window resizing and if value exceeded, change footer-background text content
 */

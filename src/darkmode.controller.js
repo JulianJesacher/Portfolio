@@ -1,5 +1,6 @@
 //Add listener to darkmode slider
 document.getElementById("darkmode-checkbox").addEventListener("click", (event) => {
+    console.log("now")
     document.body.classList.toggle("darkmode");
     localStorage.setItem("darkmodeActive", event.target.checked);
 });

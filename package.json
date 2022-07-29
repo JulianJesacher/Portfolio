@@ -4,7 +4,7 @@
   "description": "Peronal Portfolio",
   "main": "contact-me.controller.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-file main.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,10 @@
   "homepage": "https://github.com/JulianJesacher/Portfolio#readme",
   "dependencies": {
     "gsap": "^3.10.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9"
   }
 }
