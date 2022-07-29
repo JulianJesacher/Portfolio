@@ -6,7 +6,7 @@ window.captcha_expired = () => {
 };
 
 const handleDifferentContactPages = () => {
-    contactPage = document.getElementsByClassName("contact-me-page")[0];
+    const contactPage = document.getElementById("contact-me-page");
     if (window.innerWidth > 1000) {
         contactPage.classList.remove('mobile');
         contactPage.classList.add('desktop');
