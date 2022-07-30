@@ -48,6 +48,7 @@ const getProject = (projectData) => {
         projectGithubIcon.classList = "transition social-icon-wrapper";
         projectGithubIcon.title = "Project Github Link";
         projectGithubIcon.href = projectData["github-link"];
+        projectGithubIcon.target = "_blank";
         projectGithubIcon.innerHTML = githubLottieFileHTML;
         projectImageWrapper.appendChild(projectGithubIcon);
     }
