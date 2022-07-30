@@ -55,13 +55,20 @@ const getProject = (projectData) => {
     projectElement.appendChild(projectImageWrapper);
 
     const projectContent = document.createElement("div");
-    projectContent.classList.add('project-content');
+    projectContent.classList.add("project-content");
 
     //Project description
     const projectDescription = document.createElement("p");
     projectDescription.classList.add("project-description");
     projectDescription.innerText = projectData["description"];
     projectContent.appendChild(projectDescription);
+
+    //Separator
+    if (projectData["demo-link"] || projectData["github-link"]) {
+        const projectSeparator = document.createElement("div");
+        projectSeparator.classList.add("project-content-separator");
+        projectContent.appendChild(projectSeparator);
+    }
 
     //View demo button
     if (projectData["demo-link"]) {
