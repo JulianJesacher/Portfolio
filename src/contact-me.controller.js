@@ -5,7 +5,7 @@ window.captchaSuccessful = () => {
     document.getElementById("sendEmailButton").removeAttribute("disabled");
 };
 window.captchaExpired = () => {
-    document.getElementById("sendEmailButton").addAttribute("disabled", "disabled");
+    document.getElementById("sendEmailButton").addAttribute("disabled");
 };
 
 /**
