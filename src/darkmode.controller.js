@@ -43,4 +43,4 @@ setTimeout(() => {
             path.removeAttribute("fill");
         });
     });
-}, 100);
+}, 500);
