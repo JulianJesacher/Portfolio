@@ -69,6 +69,7 @@ const getProject = (projectData) => {
         projectDemoLink.classList.add("view-project-btn");
         projectDemoLink.href = projectData["demo-link"];
         projectDemoLink.innerText = "View demo";
+        projectDemoLink.target = "_blank";
         projectContent.appendChild(projectDemoLink);
     }
 
