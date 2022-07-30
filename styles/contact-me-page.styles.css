@@ -35,12 +35,26 @@ body.darkmode {
     --contact-me-form-input-background: var(--contact-me-form-input-background-dark);
 }
 
-.contact-me-page {
+#contact-me-page {
     width: 100vw;
     height: 100vh;
-    display: grid;
+    display: none;
     place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.contact-me-page::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: black;
+    opacity: 0.9;
 }
 
 .contact-me-page.desktop {
@@ -64,6 +78,7 @@ body.darkmode {
     align-items: center;
     font-family: 'Inter', sans-serif;
     margin-top: var(--contact-me-content-top-offset);
+    width: fit-content;
 }
 
 .contact-me-form {
@@ -103,7 +118,8 @@ body.darkmode {
     resize: none;
 }
 
-input, textarea{
+input,
+textarea {
     color: var(--contact-me-form-text-color);
 }
 
@@ -198,6 +214,14 @@ input, textarea{
     width: 98vw;
 }
 
+svg {
+    pointer-events: none;
+}
+
+path {
+    pointer-events: auto;
+}
+
 .contact-page-background path {
     fill: var(--contact-me-accent-orange);
 }
@@ -231,13 +255,11 @@ input, textarea{
 }
 
 /*Center recaptcha popup*/
-.g-recaptcha-bubble-arrow
-{
+.g-recaptcha-bubble-arrow {
     display: none;
 }
 
-.g-recaptcha-bubble-arrow + div
-{
+.g-recaptcha-bubble-arrow+div {
     position: fixed !important;
     left: 50%;
     top: 50%;
@@ -254,7 +276,6 @@ input, textarea{
 }
 
 .desktop .contact-me-content {
-    width: 100vw;
     max-width: 1920px;
 }
 
@@ -280,16 +301,16 @@ input, textarea{
 }
 
 /*Desktop little blolbs*/
-.contact-page-little-blob{
-    position:absolute;
+.contact-page-little-blob {
+    position: absolute;
     right: 5%;
     bottom: 1.5%;
     width: 3em;
     height: 3em;
 }
 
-.contact-page-middle-blob{
-    position:absolute;
+.contact-page-middle-blob {
+    position: absolute;
     right: 11%;
     bottom: 4%;
     width: 5em;
@@ -297,7 +318,7 @@ input, textarea{
 }
 
 .contact-page-middle-blob path,
-.contact-page-little-blob path{
+.contact-page-little-blob path {
     fill: var(--contact-me-form-background);
 }
 
@@ -353,14 +374,15 @@ input, textarea{
         --contact-me-form-input-height: 2.75rem;
         --contact-me-form-textarea-height: 8rem;
     }
-    .contact-page-little-blob{
+
+    .contact-page-little-blob {
         right: 12.5%;
         bottom: 4.5%;
         width: 4.5rem;
         height: 4.5rem;
     }
-    
-    .contact-page-middle-blob{
+
+    .contact-page-middle-blob {
         right: 19.5%;
         bottom: 10%;
         width: 7.5rem;

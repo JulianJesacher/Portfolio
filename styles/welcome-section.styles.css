@@ -21,11 +21,9 @@
 }
 
 .navbar-content-right {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
-
-    display: none;
 }
 
 .navbar-item {
@@ -182,7 +180,7 @@
         display: flex;
     }
 
-    #navbar-mobile-toggle {
+    #open-mobile-menu {
         display: none;
     }
 }
