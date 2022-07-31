@@ -15,6 +15,13 @@
         <link rel="stylesheet" href="styles/welcome-section.styles.css" />
         <link rel="stylesheet" href="styles/mobile-menu.styles.css" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('cYlH9Dzg-gteO3tpd');
+            })();
+        </script>
     </head>
     <body>
         <header>
@@ -249,11 +256,11 @@
         <div class="contact-me-page mobile" id="contact-me-page">
             <div class="contact-me-wrapper">
                 <div class="contact-me-content">
-                    <form autocomplete="off">
+                    <form autocomplete="off" id="contact-me-form">
                         <h1>Let<span>'</span>s Talk</h1>
                         <div class="contact-me-form">
                             <div class="input-wrapper">
-                                <input type="text" id="nameInput" placeholder=" " />
+                                <input name="name" type="text" id="nameInput" placeholder=" " />
                                 <label for="nameInput">
                                     <span style="transition-delay: 0ms">N</span>
                                     <span style="transition-delay: 50ms">a</span>
@@ -263,7 +270,7 @@
                                 </label>
                             </div>
                             <div class="input-wrapper">
-                                <input type="email" id="emailInput" placeholder=" " />
+                                <input name="email" type="email" id="emailInput" placeholder=" " />
                                 <label for="emailInput">
                                     <span style="transition-delay: 0ms">E</span>
                                     <span style="transition-delay: 50ms">m</span>
@@ -274,7 +281,7 @@
                                 </label>
                             </div>
                             <div class="input-wrapper">
-                                <textarea name="Message" id="messageInput" cols="30" rows="10" required></textarea>
+                                <textarea name="message" id="messageInput" cols="30" rows="10" required></textarea>
                                 <label for="messageInput">
                                     <span style="transition-delay: 0ms">M</span>
                                     <span style="transition-delay: 50ms">e</span>
@@ -409,5 +416,6 @@
         <script type="text/javascript" src="src/projects.controller.js"></script>
         <script type="text/javascript" src="src/mobile-menu.controller.js"></script>
         <script type="text/javascript" src="src/contact-me.controller.js"></script>
+        <script type="text/javascript" src="src/emailjs-keys.js"></script>
     </body>
 </html>

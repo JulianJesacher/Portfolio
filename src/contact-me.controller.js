@@ -89,4 +89,25 @@ contactButtons.forEach((button) => {
     button.addEventListener("click", openForm);
 });
 
+/**
+ * Sets event listener to contact-me form to and sends email on submit click
+ */
+const handleEmails = () => {
+    const contactMeForm = document.getElementById("contact-me-form");
+    console.log("adding event listener");
+    contactMeForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log("event occured");
+        emailjs.sendForm(apiKeys.SERVICE_ID, apiKeys.TEMPLATE_ID, event.target, apiKeys.USER_ID).then(
+            (result) => {
+                console.log(result.text);
+            },
+            (error) => {
+                console.log(error.text);
+            }
+        );
+    });
+};
+
 window.addEventListener("resize", setCorrectForm);
+window.addEventListener("load", handleEmails);
