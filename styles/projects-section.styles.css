@@ -234,6 +234,7 @@ body.darkmode {
         margin-left: 0;
         margin-bottom: 0;
         height: 100%;
+        max-height: calc(0.35*var(--project-width));
         width: auto;
         aspect-ratio: 1;
         margin-right: calc(-1.5*var(--project-image-offset));
