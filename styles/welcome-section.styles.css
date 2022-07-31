@@ -28,12 +28,21 @@
 
 .navbar-item {
     color: var(--secondary-text-color);
+    text-decoration: none;
 }
 
 #open-mobile-menu {
     background: none;
     border: none;
     font-size: 1em;
+    cursor: pointer;
+}
+
+.navbar-content-right li {
+    list-style-type: none;
+    margin: 0 0.5em;
+    height: fit-content;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
