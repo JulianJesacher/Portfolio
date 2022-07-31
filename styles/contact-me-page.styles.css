@@ -389,3 +389,24 @@ path {
         height: 7.5rem;
     }
 }
+
+#contact-me-form.success #success-lottie {
+    display: block;
+}
+
+#contact-me-form:not(.success) #success-lottie {
+    display: none;
+}
+
+#contact-me-form.error #error-lottie {
+    display: block;
+}
+
+#contact-me-form:not(.error) #error-lottie {
+    display: none;
+}
+
+#contact-me-form.error #sendEmailButton,
+#contact-me-form.success #sendEmailButton {
+    display: none;
+}

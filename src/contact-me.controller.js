@@ -51,9 +51,9 @@ const removeClosingEventListeners = () => {
 };
 
 /**
- * Opens contact-me form, disables document scrolling, and sets event listeners to close on outbound clicks.
+ * Shows contact-me form, disables document scrolling, and sets event listeners to close on outbound clicks.
  */
-const openForm = () => {
+const showForm = () => {
     const contactPage = document.getElementById("contact-me-page");
     contactPage.style.display = "grid";
     document.body.style.overflow = "hidden";
@@ -62,20 +62,25 @@ const openForm = () => {
 
     //Timeout to not trigger event when contact-me button is clicked
     setTimeout(() => {
-        const closingListenerFunction = (event) => {
-            closeForm();
-            document.removeEventListener("click", closingListenerFunction);
-            removeClosingEventListeners();
-        };
-
-        document.addEventListener("click", closingListenerFunction);
+        document.addEventListener("click", closeForm);
     }, 0);
 };
 
 /**
- * Closes contact-me form and enables document scrolling.
+ * Closes contact-me form, removes all event listeners and resets error/success state
  */
-const closeForm = () => {
+const closeForm = (event) => {
+    const contactMeForm = document.getElementById("contact-me-form");
+    contactMeForm.classList = [];
+    hideForm();
+    document.removeEventListener("click", closeForm);
+    removeClosingEventListeners();
+};
+
+/**
+ * Hides contact-me form and enables document scrolling.
+ */
+const hideForm = () => {
     const contactPage = document.getElementById("contact-me-page");
     contactPage.style.display = "none";
     document.body.style.overflow = "visible";
@@ -86,7 +91,7 @@ const closeForm = () => {
  */
 const contactButtons = Array.from(document.getElementsByClassName("contact-btn"));
 contactButtons.forEach((button) => {
-    button.addEventListener("click", openForm);
+    button.addEventListener("click", showForm);
 });
 
 /**
@@ -100,13 +105,31 @@ const handleEmails = () => {
         console.log("event occured");
         emailjs.sendForm(apiKeys.SERVICE_ID, apiKeys.TEMPLATE_ID, event.target, apiKeys.USER_ID).then(
             (result) => {
-                console.log(result.text);
+                showEmailSuccess(result);
             },
             (error) => {
-                console.log(error.text);
+                showEmailError(error);
             }
         );
     });
+};
+
+const showEmailSuccess = (result) => {
+    const contactMeForm = document.getElementById("contact-me-form");
+    contactMeForm.classList.add("success");
+    setTimeout(() => {
+        contactMeForm.classList.remove("success");
+        closeForm();
+    }, 2500);
+};
+
+const showEmailError = (error) => {
+    const contactMeForm = document.getElementById("contact-me-form");
+    contactMeForm.classList.add("error");
+    alert(error.text);
+    setTimeout(() => {
+        contactMeForm.classList.remove("error");
+    }, 3500);
 };
 
 window.addEventListener("resize", setCorrectForm);
