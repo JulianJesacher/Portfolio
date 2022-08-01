@@ -145,7 +145,7 @@
     z-index: -1;
 }
 
-.social-icon {
+.social-icon path {
     fill: var(--social-icon-foreground);
     transition: var(--main-transition-time);
 }
