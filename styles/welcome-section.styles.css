@@ -145,11 +145,6 @@
     z-index: -1;
 }
 
-.social-icon path {
-    fill: var(--social-icon-foreground);
-    transition: var(--main-transition-time);
-}
-
 @media (min-width: 500px) {
     .welcome-portrait {
         height: 37.5rem;

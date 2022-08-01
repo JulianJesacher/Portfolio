@@ -1,9 +1,20 @@
-const githubLottieFileHTML = `<lottie-player
-class="project-social-icon"
-src="https://assets4.lottiefiles.com/packages/lf20_easggm31.json"
+const githubDarkLottieFileHTML = `<lottie-player
+class="project-social-icon light"
+src="https://assets4.lottiefiles.com/packages/lf20_pbgriaz0.json"
 background="transparent"
 speed="1"
-style="width: 70%; height: 70%"
+style="width: 70%"
+hover
+loop
+></lottie-player>
+`;
+
+const githubLightLottieFileHTML = `<lottie-player
+class="project-social-icon dark"
+src="https://assets5.lottiefiles.com/packages/lf20_vb2mcaz9.json"
+background="transparent"
+speed="1"
+style="width: 70%"
 hover
 loop
 ></lottie-player>
@@ -49,7 +60,7 @@ const getProject = (projectData) => {
         projectGithubIcon.title = "Project Github Link";
         projectGithubIcon.href = projectData["github-link"];
         projectGithubIcon.target = "_blank";
-        projectGithubIcon.innerHTML = githubLottieFileHTML;
+        projectGithubIcon.innerHTML = githubLightLottieFileHTML + githubDarkLottieFileHTML;
         projectImageWrapper.appendChild(projectGithubIcon);
     }
     projectElement.appendChild(projectImageWrapper);

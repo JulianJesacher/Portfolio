@@ -305,3 +305,23 @@ body.darkmode {
         display: none;
     }
 }
+
+.project-social-icon {
+    aspect-ratio: 1;
+}
+
+.project-social-icon.dark {
+    display: none;
+}
+
+.project-social-icon.light {
+    display: block;
+}
+
+body.darkmode .project-social-icon.dark {
+    display: block;
+}
+
+body.darkmode .project-social-icon.light {
+    display: none;
+}

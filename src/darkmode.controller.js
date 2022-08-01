@@ -22,25 +22,3 @@ window.addEventListener("load", (event) => {
         checkBox.checked = true;
     }
 });
-
-/*
-After lottiefiles have been replaced, add css class to their paths
-to allow to change color dynamically
-*/
-setTimeout(() => {
-    Array.from(document.getElementsByClassName("social-icon")).forEach((socialIcon) => {
-        paths = socialIcon.shadowRoot.querySelectorAll("svg path");
-        paths.forEach((path) => {
-            path.classList.add("social-icon");
-            path.removeAttribute("fill");
-        });
-    });
-
-    Array.from(document.getElementsByClassName("project-social-icon")).forEach((socialIcon) => {
-        paths = socialIcon.shadowRoot.querySelectorAll("svg path");
-        paths.forEach((path) => {
-            path.classList.add("project-social-icon");
-            path.removeAttribute("fill");
-        });
-    });
-}, 500);

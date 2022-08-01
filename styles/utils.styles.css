@@ -42,3 +42,19 @@
     align-items: center;
     cursor: pointer;
 }
+
+.social-icon.dark {
+    display: none;
+}
+
+.social-icon.light {
+    display: block;
+}
+
+body.darkmode .social-icon.dark {
+    display: block;
+}
+
+body.darkmode .social-icon.light {
+    display: none;
+}
