@@ -4,4 +4,4 @@ RUNTIME_CONF="{
   \"USER_ID\": \"$USER_ID\"
 }"
 
-echo $RUNTIME_CONF > src/config.json
+echo $RUNTIME_CONF > /usr/share/nginx/src/config.json
