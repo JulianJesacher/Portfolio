@@ -125,11 +125,10 @@ body.darkmode {
 .footer-background-decorator {
     position: absolute;
     left: 48px;
-    top: 7.5vh;
-    height: 85vh;
+    bottom: 7.5vh;
     z-index: -1;
     display: none;
-    max-height: 90em;
+    max-height: 40em;
 }
 
 
