@@ -215,3 +215,9 @@
         height: 95%;
     }
 }
+
+@media (min-width: 2200px) {
+    :root {
+        --max-width: 1920px;
+    }
+}
