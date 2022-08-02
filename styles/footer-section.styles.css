@@ -98,7 +98,7 @@ body.darkmode {
     stroke-width: 0;
 }
 
-.footer-background>text {
+.footer-background-text {
     fill: var(--background-text);
 }
 
