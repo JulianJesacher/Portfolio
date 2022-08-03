@@ -99,7 +99,6 @@ contactButtons.forEach((button) => {
  */
 const handleEmails = () => {
     const contactMeForm = document.getElementById("contact-me-form");
-    console.log("adding event listener");
     contactMeForm.addEventListener("submit", (event) => {
         event.preventDefault();
         console.log("event occured");

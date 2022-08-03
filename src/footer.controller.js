@@ -52,4 +52,3 @@ ScrollTrigger.matchMedia({
             .addLabel("end");
     },
 });
-tl.disable();
