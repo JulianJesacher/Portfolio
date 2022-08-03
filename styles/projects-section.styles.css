@@ -28,8 +28,16 @@ body.darkmode {
     --project-title-background: var(--project-title-background-dark);
 }
 
-.project-wrapper {
+.projects-container {
     margin-top: 2rem;
+    display:flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 0;
+    overscroll-behavior: none;
+}
+
+.project-wrapper {
     display: grid;
     place-items: center;
 }
