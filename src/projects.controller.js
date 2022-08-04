@@ -23,7 +23,7 @@ loop
 /**
  * Parses a json file at the given path and returns the content as javascript object
  * @param {string} path Path to the file
- * @returns 
+ * @returns
  */
 const getJsonData = async (path) => {
     return await fetch(path).then((result) => result.json());
@@ -31,8 +31,8 @@ const getJsonData = async (path) => {
 
 /**
  * Takes the required data for a project and returns an HTMLElement with all required childs and classes to display the project
- * @param projectData 
- * @returns HTMLElement of the Project 
+ * @param projectData
+ * @returns HTMLElement of the Project
  */
 const getProject = (projectData) => {
     //Project-wrapper
@@ -115,7 +115,7 @@ const getProject = (projectData) => {
 };
 
 /**
- * Parses projects.json and appends the contained projects to the projects container. If more than one project was appended, 
+ * Parses projects.json and appends the contained projects to the projects container. If more than one project was appended,
  * horizontal scroll for the projects section is initialized
  */
 const showProjects = async () => {
@@ -129,28 +129,32 @@ const showProjects = async () => {
 };
 
 /**
- * Initializes gsap ScrollTrigger to set horizontal scroll animation to the projects section
+ * Initializes gsap ScrollTrigger to set horizontal scroll animation to the projects section, if the screen is wide enough
  */
 const initializeVerticalScroll = () => {
-    const projectContainer = document.getElementById("projects-container");
-    const projects = gsap.utils.toArray("#projects-container .project-wrapper");
-    console.log(projectContainer, projects);
+    ScrollTrigger.matchMedia({
+        "(min-width: 800px)": function () {
+            const projectContainer = document.getElementById("projects-container");
+            const projects = gsap.utils.toArray("#projects-container .project-wrapper");
 
-    tween = gsap.to(projects, {
-        xPercent: -100 * (projects.length - 1),
-        ease: "none",
-        scrollTrigger: {
-            trigger: "#projects-container",
-            pin: true,
-            start: "top top",
-            scrub: 1,
-            snap: {
-                snapTo: 1 / (projects.length - 1),
-                inertia: false,
-                duration: { min: 0.1, max: 0.1 },
-            },
-            end: () => "+=" + projectContainer.offsetWidth * projects.length,
+            tween = gsap.to(projects, {
+                xPercent: -100 * (projects.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#projects-container",
+                    pin: true,
+                    start: "top top",
+                    scrub: 1,
+                    snap: {
+                        snapTo: 1 / (projects.length - 1),
+                        inertia: false,
+                        duration: { min: 0.1, max: 0.1 },
+                    },
+                    end: () => "+=" + projectContainer.offsetWidth * projects.length,
+                },
+            });
         },
+        all: function () {},
     });
 };
 
