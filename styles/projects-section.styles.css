@@ -34,7 +34,7 @@ body.darkmode {
     flex-wrap: nowrap;
     overflow: hidden;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .project-wrapper {
