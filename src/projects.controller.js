@@ -108,42 +108,33 @@ const showProjects = async () => {
     const projectsData = await getJsonData("./projects.json");
     const projectsContainer = document.getElementById("projects-container");
     projectsData.forEach((singleProjectData) => projectsContainer.appendChild(getProject(singleProjectData)));
-    projectsContainer.style.width = projectsData.length * 100 + "%";
+
+    if (projectsData.length > 1) {
+        initializeVerticalScroll();
+    }
+};
+
+const initializeVerticalScroll = () => {
+    const projectContainer = document.getElementById("projects-container");
+    const projects = gsap.utils.toArray("#projects-container .project-wrapper");
+    console.log(projectContainer, projects);
+
+    tween = gsap.to(projects, {
+        xPercent: -100 * (projects.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#projects-container",
+            pin: true,
+            start: "top top",
+            scrub: 1,
+            snap: {
+                snapTo: 1 / (projects.length - 1),
+                inertia: false,
+                duration: { min: 0.1, max: 0.1 },
+            },
+            end: () => "+=" + projectContainer.offsetWidth * projects.length,
+        },
+    });
 };
 
 window.addEventListener("load", showProjects);
-
-const projectContainer = document.getElementById("projects-container");
-
-/*
-const projects = gsap.utils.toArray("#projects-container .project-wrapper");
-tween = gsap.to(projects, {
-    xPercent: -100 * (projects.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: "#projects-container",
-        pin: true,
-        start: "top top",
-        scrub: 1,
-        snap: {
-            snapTo: 1 / (projects.length - 1),
-            inertia: false,
-            duration: { min: 0.1, max: 0.1 },
-        },
-        end: () => "+=" + (projectContainer.offsetWidth - innerWidth),
-    },
-});
-*/
-
-gsap.to(projects, {
-    xPercent: -100 * (projects.length - 1),
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#projects-container",
-      pin: true,
-      scrub: 1,
-      snap: 1 / (projects.length - 1),
-      end: "+=3500",
-    }
-  });
-  
