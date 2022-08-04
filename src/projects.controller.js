@@ -20,10 +20,20 @@ loop
 ></lottie-player>
 `;
 
+/**
+ * Parses a json file at the given path and returns the content as javascript object
+ * @param {string} path Path to the file
+ * @returns 
+ */
 const getJsonData = async (path) => {
     return await fetch(path).then((result) => result.json());
 };
 
+/**
+ * Takes the required data for a project and returns an HTMLElement with all required childs and classes to display the project
+ * @param projectData 
+ * @returns HTMLElement of the Project 
+ */
 const getProject = (projectData) => {
     //Project-wrapper
     const projectWrapper = document.createElement("div");
@@ -104,6 +114,10 @@ const getProject = (projectData) => {
     return projectWrapper;
 };
 
+/**
+ * Parses projects.json and appends the contained projects to the projects container. If more than one project was appended, 
+ * horizontal scroll for the projects section is initialized
+ */
 const showProjects = async () => {
     const projectsData = await getJsonData("./projects.json");
     const projectsContainer = document.getElementById("projects-container");
@@ -114,6 +128,9 @@ const showProjects = async () => {
     }
 };
 
+/**
+ * Initializes gsap ScrollTrigger to set horizontal scroll animation to the projects section
+ */
 const initializeVerticalScroll = () => {
     const projectContainer = document.getElementById("projects-container");
     const projects = gsap.utils.toArray("#projects-container .project-wrapper");
