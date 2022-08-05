@@ -1,7 +1,7 @@
-RUNTIME_CONF="{
+RUNTIME_CONF="apiKeys = {
   \"SERVICE_ID\": \"$SERVICE_ID\",
   \"TEMPLATE_ID\": \"$TEMPLATE_ID\",
   \"USER_ID\": \"$USER_ID\"
 }"
 
-echo $RUNTIME_CONF > /usr/share/nginx/src/config.json
+echo "$RUNTIME_CONF" > /usr/share/nginx/html/src/config.json
