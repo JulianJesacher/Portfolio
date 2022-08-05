@@ -4,4 +4,4 @@ RUNTIME_CONF="apiKeys = {
   \"USER_ID\": \"$USER_ID\"
 }"
 
-echo "$RUNTIME_CONF" > /usr/share/nginx/html/src/config.json
+echo "$RUNTIME_CONF" > /usr/share/nginx/html/src/config.js
