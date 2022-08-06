@@ -208,10 +208,10 @@ textarea {
 .contact-page-foreground,
 .contact-page-shadow {
     position: absolute;
-    top: 2.5vh;
-    left: 1vw;
-    height: 95vh;
-    width: 98vw;
+    top: 2.5%;
+    left: 1%;
+    height: 95%;
+    width: 98%;
 }
 
 svg {
@@ -320,6 +320,23 @@ path {
 .contact-page-middle-blob path,
 .contact-page-little-blob path {
     fill: var(--contact-me-form-background);
+}
+
+.contact-me-background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.contact-me-background-wrapper>div {
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
 }
 
 
