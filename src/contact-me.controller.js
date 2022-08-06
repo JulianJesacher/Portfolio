@@ -101,7 +101,6 @@ const handleEmails = () => {
     const contactMeForm = document.getElementById("contact-me-form");
     contactMeForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        console.log("event occured");
         emailjs.sendForm(apiKeys.SERVICE_ID, apiKeys.TEMPLATE_ID, event.target, apiKeys.USER_ID).then(
             (result) => {
                 showEmailSuccess(result);
