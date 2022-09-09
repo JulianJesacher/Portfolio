@@ -1,5 +1,12 @@
 [
     {
+        "title": "GraphVisualizer",
+        "description": "The Graph Visualizer is a web application illustrates common shortest path algorithms in step-by-step manner. It is a suitable tool for educational environments.",
+        "demo-link": "https://graph.julianjesacher.dev/",
+        "github-link": "https://github.com/JulianJesacher/GraphVisualizer",
+        "project-picture-path": "assets/project-images/GraphVisualizer.webp"
+    },
+    {
         "title": "FoodBook",
         "description": "FoodBook is a social network for sharing recipes. Its content is protected via JWT authentication and served via an Express.js REST API. The user can create, update and delete recipes using dynamic forms, which are implemented with Angular's Reactive Forms API. At the core of FoodBook is a typical MariaDB database which data is fetched either as an aggregate or lazily and provided in an infinite scroll timeline",
         "demo-link": "https://foodbook.julianjesacher.dev/",
