@@ -13,6 +13,7 @@ const handleFooterBackgroundText = () => {
 window.addEventListener("resize", handleFooterBackgroundText);
 window.addEventListener("load", handleFooterBackgroundText);
 
+/*
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".footer-section",
@@ -52,3 +53,4 @@ ScrollTrigger.matchMedia({
             .addLabel("end");
     },
 });
+*/
